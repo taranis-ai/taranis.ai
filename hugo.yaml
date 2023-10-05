@@ -1,0 +1,82 @@
+baseURL: 'https://taranis.ai/'
+languageCode: 'en-us'
+title: 'Taranis AI'
+theme:
+  - 'taranis'
+  - 'hugo-embed-pdf-shortcode'
+
+params:
+  env: production
+  title: Taranis AI
+  description: "Taranis AI"
+  author: AIT
+  # images: [""]
+  DateFormat: "January 2, 2006"
+  defaultTheme: auto # dark, light
+  disableThemeToggle: true
+
+  ShowReadingTime: false
+  ShowShareButtons: false
+  ShowPostNavLinks: false
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: false
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  disableSpecial1stPost: false
+  disableScrollToTop: false
+  comments: false
+  hidemeta: true
+  hideFooter: true
+  hideSummary: false
+  showtoc: false
+  tocopen: false
+  enableEmoji: true
+
+  assets:
+    favicon: "/favicon.ico"
+
+  label:
+    text: " "
+    icon: /taranis-logo.svg
+    iconHeight: 35
+
+  # profile-mode
+  profileMode:
+    enabled: true
+    title: Taranis AI
+    imageUrl: "/screenshot.png"
+    imageTitle: "Screenshot of Taranis AI"
+    subtitle: |
+      Taranis AI is an advanced Open-Source Intelligence (OSINT) tool, leveraging Artificial Intelligence to revolutionize information gathering and situational analysis.
+    buttons:
+      - identifier: documentation
+        name: documentation
+        url: /documentation/overview/
+      - identifier: presentation
+        name: presentation
+        url: /presentation/
+      - identifier: demo
+        name: Demo (coming soon)
+        url:
+
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/taranis-ai"
+
+  cover:
+    hidden: true
+    hiddenInList: true
+    hiddenInSingle: true
+
+menu:
+  main:
+    - identifier: documentation
+      name: documentation
+      url: /documentation/overview/
+      weight: 10
+    - identifier: github
+      name: GitHub
+      url: https://github.com/taranis-ai/taranis-ai
+      weight: 20
