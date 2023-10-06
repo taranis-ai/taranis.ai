@@ -27,7 +27,7 @@ params:
   disableScrollToTop: false
   comments: false
   hidemeta: true
-  hideFooter: true
+  hideFooter: false
   hideSummary: false
   showtoc: false
   tocopen: false

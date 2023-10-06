@@ -1,11 +1,11 @@
 <div class="profile">
     {{- with site.Params.profileMode }}
     <div class="profile_inner">
-        {{- if .imageUrl -}}
-        <img draggable="false" src="{{ .imageUrl | absURL }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}" />
-        {{- end }}
         <h1>{{ .title | default site.Title | markdownify }}</h1>
         <span>{{ .subtitle | markdownify }}</span>
+        {{- if .imageUrl -}}
+        <img draggable="false" src="{{ .imageUrl | absURL }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}" style="margin-top: 40px;"/>
+        {{- end }}
         {{- partial "social_icons.html" site.Params.socialIcons -}}
 
         {{- with .buttons }}
