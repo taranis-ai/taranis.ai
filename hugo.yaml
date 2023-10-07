@@ -49,6 +49,11 @@ params:
     imageTitle: "Screenshot of Taranis AI"
     subtitle: |
       Taranis AI is an advanced Open-Source Intelligence (OSINT) tool, leveraging Artificial Intelligence to revolutionize information gathering and situational analysis.
+    contactInfo:
+      web: AIT Cyber Security
+      url: https://www.ait.ac.at/en/research-topics/cyber-security
+      mail: florian.skopik@ait.ac.at
+      name: florian.skopik@ait.ac.at
     buttons:
       - identifier: documentation
         name: documentation
