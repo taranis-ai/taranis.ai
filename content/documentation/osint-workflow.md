@@ -13,4 +13,4 @@ url: "/documentation/osint-workflow"
 - Import/Export: Sources can be imported and exported as json
 - CRUD: Sources can be created, updated and deleted. For each source a collector, feed URL and the content location can be defined among other things.
 
-_Note: So far we have used an RSS collector with following sources: [Inital setup](https://github.com/ait-cs-IaaS/Taranis-NG/wiki/Deployment#initial-setup)_
+_Note: So far we have used an RSS collector with following sources: [Inital setup](/documentation/deployment/#initial-setup-)_
