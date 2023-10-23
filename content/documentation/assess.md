@@ -8,7 +8,7 @@ url: "/documentation/assess"
 
 
 ## Description
-Assess displays a list of collected news items from various sources, which can be searched, filtered, and sorted based on different attributes (see [Filters](#Filters)). Furthermore, news items can be merged, added to reports, analyzed and have their state changed  (see [Items](#Items)).
+Assess displays a list of collected news items from various sources, which can be searched, filtered, and sorted based on different attributes (see [Filters](#filters)). Furthermore, news items can be merged, added to reports, analyzed and have their state changed  (see [Items](#items)).
 
 ## Functionalities
 ### Filters
@@ -18,7 +18,7 @@ Assess displays a list of collected news items from various sources, which can b
 * Source group: Filter items by a particular source group
 * Source: Filter items by source 
 * Range: Filter time range (all, today, last week)
-* Tag: Filter by item's tag
+* Tags: Filter by item's tag
 * Read, important, items in reports, relevant: Filter by item's state
 * Sort: Filter by published date, relevance
 * [DEBUG] Chart properties: Change threshold and range of second y-axis in item's graphic
@@ -37,5 +37,5 @@ Detail view:
 
 Charts: 
 * Each item displays a chart if data has been aggregated in the last 7 days. 
-* Line and bar chart display the same data, which is the accumulation of items per day
+* Line and bar chart display the same data, which is the accumulation of items per day.
 * The y-axis of the line chart can be adapted and is the same for all charts in the current items list. Therefore, charts can be compared properly.

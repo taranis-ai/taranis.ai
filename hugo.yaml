@@ -48,7 +48,19 @@ params:
     imageUrl: "/screenshot.png"
     imageTitle: "Screenshot of Taranis AI"
     subtitle: |
-      Taranis AI is an advanced Open-Source Intelligence (OSINT) tool, leveraging Artificial Intelligence to revolutionize information gathering and situational analysis.
+      **Taranis AI** is an advanced Open-Source Intelligence (OSINT) tool, leveraging Artificial Intelligence to revolutionize information gathering and situational analysis.
+    description: |
+      **Taranis AI** preserves the OSINT analysis workflow of **[Taranis-NG](https://github.com/SK-CERT/Taranis-NG)**, but considerably extends its features with:
+
+
+      - Task queue via Celery for asynchronous news item processing
+      - Modern NLP features like entity recognition and summary creation
+      - Story clustering to reduce analyst workload
+      - Keyword and tag dashboard visualization
+      - Recognizes cybersecurity terms like APTs, CVEs, IoCs
+      - Include/exclude lists for collection and tagging
+      - Advanced search and filters for item management
+      - Grouped sources for easier task application
     contactInfo:
       web: AIT Cyber Security
       url: https://www.ait.ac.at/en/research-topics/cyber-security

@@ -34,3 +34,38 @@
 .button:active {
     transform: scale(0.96);
 }
+
+.profile_description {
+    display: inline-block;
+    text-align: left;  
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.profile_description ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    margin-top: 20px;
+    padding-left: 50px;
+}
+  
+.profile_description li {
+    display: flex;
+    align-items: flex-start;
+}
+
+.profile_description li::before {
+    content: "•";
+    margin-right: 1em;
+    flex-shrink: 0;
+}
+
+.profile_description li span {
+    display: inline-block;
+    flex-grow: 1;
+}
+
+.profile a {
+    color: inherit;
+    border-bottom: 1px solid var(--secondary);
+}

@@ -6,6 +6,13 @@
         {{- if .imageUrl -}}
         <img draggable="false" src="{{ .imageUrl | absURL }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}" class="profile-banner"/>
         {{- end }}
+
+        {{- if .description -}}
+        <div class="profile_description">
+            {{ .description | markdownify }}
+        </div>
+        {{- end }}
+
         {{- partial "social_icons.html" site.Params.socialIcons -}}
 
         {{- with .buttons }}

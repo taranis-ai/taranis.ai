@@ -1,7 +1,11 @@
 {{- if not (.Param "hideFooter") }}
 <footer class="footer">
+    {{ if .IsHome }}
+    <p class="footer_attribution">This project was inspired by <a href="https://github.com/NCSC-NL/taranis3">Taranis3</a>, as well as by <a href="https://github.com/SK-CERT/Taranis-NG/">Taranis-NG</a>.
+    It is released under terms of the <a href="https://eupl.eu/1.2/en/">European Union Public Licence</a>.</p>
+    <p><img class="footer-img" src="/en_horizontal_cef_logo_2.png" alt="Co-financed by the Connecting Europe Facility of the European Union"></p>
+    {{- end }}
     <span>&copy; {{ now.Year }} <a href="{{ "" | absLangURL }}">{{ site.Title }}</a> | <a href="/imprint/">imprint</a></span>
-    <p><img class="footer-img" src="https://ec.europa.eu/inea/sites/default/files/ceflogos/en_horizontal_cef_logo_2.png" alt="Co-financed by the Connecting Europe Facility of the European Union"></p>
 </footer>
 {{- end }}
 
