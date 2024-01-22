@@ -11,7 +11,7 @@ cd taranis-ai/docker/
 
 ## Configuration
 
-Copy env.sample to .env
+Copy `env.sample` to `.env`
 ```bash
 cp env.sample .env
 ```
@@ -36,7 +36,7 @@ http://<url>:<TARANIS_NG_PORT>/login
 **The default credentials are `user` / `user` and `admin` / `admin`.**
 
 
-Open `http://<url>:<TARANIS_NG_PORT>/config/sources` and click [Import] to import json-file with sources (see below).
+Open `http://<url>:<TARANIS_NG_PORT>/config/sources` and click **Import** to import json-file with sources (see below).
 
 Example RSS Sources:
 

@@ -3,9 +3,6 @@ title: "User settings"
 url: "/documentation/user-settings"
 ---
 
-* [Description](#description)
-* [Functionalities](#functionalities)
-
 ## Description
 Any user has the ability to change various settings and can log in/out from the application.
 

@@ -1,12 +1,7 @@
 ---
 title: "OpenAPI"
-url: "/documentation/OpenAPI"
+url: "/documentation/administration/OpenAPI"
 ---
-
-* [Description](#description)
-* [Functionalities](#functionalities)
-* [Screenshots](#screenshots)
-
 
 ## Description
 The admin user can access the Taranis API through Swagger UI. Swagger UI displays OpenAPI specifications as an interactive API documentation. 

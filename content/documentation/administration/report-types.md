@@ -1,6 +1,6 @@
 ---
 title: "Report Types"
-url: "/documentation/report-types"
+url: "/documentation/administration/report-types"
 ---
 
 * [Description](#description)
