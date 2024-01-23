@@ -5,9 +5,10 @@ url: "/documentation/deployment"
 
 Clone via git
 ```
-git clone --depth 1  https://github.com/taranis-ai/taranis-ai
+GIT_LFS_SKIP_SMUDGE=1 git clone --depth 1  https://github.com/taranis-ai/taranis-ai
 cd taranis-ai/docker/
 ```
+_Note: `GIT_LFS_SKIP_SMUDGE=1` to skip large files saved using [Git LFS](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-git-large-file-storage)_
 
 ## Configuration
 
