@@ -3,15 +3,15 @@ title: "Administration"
 url: "/documentation/administration"
 ---
 
-- [Functionalities](#functionalities)
-- [Screenshots](#screenshots)
+_Note: These options are accessible only via users with respective administration privileges. (See [User management](/documentation/administration/user-management/))_
 
 ## Functionalities 👤
 
-- [OSINT workflow](/documentation/osint-workflow)
-- [Report Types & Attributes](/documentation/report-types)
-- [User management](/documentation/user-management)
-- [OpenAPI](/documentation/OpenAPI)
+- [User management](/documentation/administration/user-management)
+- [OSINT workflow](/documentation/administration/osint-workflow)
+- [OSINTSources](/documentation/administration/osint-sources)
+- [Report Types & Attributes](/documentation/administration/report-types)
+- [OpenAPI](/documentation/administration/OpenAPI)
 
 ## Screenshots
 

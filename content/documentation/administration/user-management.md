@@ -1,6 +1,6 @@
 ---
-title: "User management"
-url: "/documentation/user-management"
+title: "User Management"
+url: "/documentation/administration/user-management"
 ---
 
 * [Description](#description)

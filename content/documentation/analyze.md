@@ -10,7 +10,7 @@ url: "/documentation/analyze"
 
 ## Description
 Analyze displays a list of all report items. They can be created, edited, deleted and filtered. 
-Different types of reports can be created. Those types can be managed by the _admin_ user in the Administration/Report Types endpoint (see [Report Types](/documentation/report-types)).
+Different types of reports can be created. Those types can be managed by the _admin_ user in the Administration/Report Types endpoint (see [Report Types](/documentation/administration/report-types)).
 
 _After one of the next releases, it will also be possible to create products from reports._
 

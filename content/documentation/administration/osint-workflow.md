@@ -1,6 +1,6 @@
 ---
 title: "OSINT workflow"
-url: "/documentation/osint-workflow"
+url: "/documentation/administration/osint-workflow"
 ---
 
 # Functionalities 👤
