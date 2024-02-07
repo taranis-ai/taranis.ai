@@ -4,6 +4,7 @@ This repository contains the website 'taranis.ai' which is the documentation for
 
 
 ## Develop
+*Note: Clone the repository with submodules.* 
 
 ```
 hugo server
