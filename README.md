@@ -4,7 +4,7 @@ This repository contains the website 'taranis.ai' which is the documentation for
 
 
 ## Develop
-*Note: Clone the repository with submodules.* 
+*Note: Clone the repository with submodules and some files depend on Git LFS.* 
 
 ```
 hugo server
