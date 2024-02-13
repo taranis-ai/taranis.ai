@@ -46,6 +46,7 @@ params:
     enabled: true
     title: Taranis AI
     imageUrl: "/screenshot.png"
+    videoUrl: "/taranis-walkthrough-video.webm"
     imageTitle: "Screenshot of Taranis AI"
     subtitle: |
       **Taranis AI** is an advanced Open-Source Intelligence (OSINT) tool, leveraging Artificial Intelligence to revolutionize information gathering and situational analysis.
