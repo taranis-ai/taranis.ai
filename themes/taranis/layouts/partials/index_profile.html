@@ -3,9 +3,8 @@
     <div class="profile_inner">
         <h1>{{ .title | default site.Title | markdownify }}</h1>
         <span>{{ .subtitle | markdownify }}</span>
-        {{- if .videoUrl -}}
         <style>
-            .video-container {
+            .media-container {
                 position: relative;
                 padding-bottom: 56.25%; /* 16:9 aspect ratio */
                 height: 0;
@@ -14,7 +13,7 @@
                 margin-top: 10px;
             }
 
-            .video-container video {
+            .media-container video {
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -22,12 +21,15 @@
                 height: 100%;
             }
         </style>
-        <div class="video-container">
-            <video controls poster="{{ .imageUrl | absURL }}">
+        {{- if .videoUrl }}
+        <div class="media-container">
+            <video controls {{ if .imageUrl }}poster="{{ .imageUrl | absURL }}"{{ end }}>
                 <source src="{{ .videoUrl }}" type="video/webm">
                 Your browser does not support the video tag.
             </video>
         </div>
+        {{- else if .imageUrl }}
+        <img draggable="false" src="{{ .imageUrl | absURL }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}" class="profile-banner" style="width: 100%; height: auto; object-fit: cover;"/>
         {{- end }}
 
         {{- if .description -}}
