@@ -9,6 +9,7 @@ url: "/documentation/administration/product-types"
 1. [Prebuilt Product Types](#prebuilt-product-types)
 1. [Editing Product Types](#editing-product-types)
 1. [Create new Product Type with example](#create-new-product-types)
+1. [Advanced behaviour](#advanced-behaviour)
 
 ## Description
 Product Types facilitate the publication of products capable of aggregating multiple report items. While there are several prebuilt product types available, users also have the option to create their own product types using custom templates.
@@ -44,6 +45,14 @@ This is an example to render arbitrary values and loop over attributes.
     {% endfor %}
     ```
 _Note: If one is interested in creating own templates, it is a good to start to render the object `{{ data }}` first, to understand how to parse the object properly._
-3. Restart the Taranis AI instance.
+
+4. Restart the Taranis AI instance.
 
 _Note: It is also possible to copy `src/core/core/static/presenter_templates/<new-custom-template.txt>` to a dynamic folder `src/core/taranis_data/presenter_templates` so the restart is not necessary._
+
+## Advanced behaviour
+If needed, templates can be utilized for more complex renderings by leveraging custom attributes. 
+
+Currently, this functionality is demonstrated in the `text_template.txt` file, where the attribute `omission` of type "Omit Keys" allows for the exclusion of unnecessary attributes from publication. To employ this feature, the administrator simply needs to add this attribute to the relevant report type. Then, within a specific report ([Analyze View](/documentation/analyze)), they can specify the attributes to omit by listing them as comma-separated strings. 
+
+It is essential to ensure that the "Name" used for the report type attribute matches exactly with the key used in the template. 
