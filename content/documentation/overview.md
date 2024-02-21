@@ -10,6 +10,7 @@ Taranis AI provides following functionalities:
 
 - [Assess](/documentation/assess)
 - [Analyze](/documentation/analyze)
+- [Publish](/documentation/publish)
 - [Dashboard](/documentation/dashboard)
 - [Administration](/documentation/administration) 👤
 - [User settings](/documentation/user-settings)

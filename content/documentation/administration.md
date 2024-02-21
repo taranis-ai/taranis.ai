@@ -11,6 +11,7 @@ _Note: These options are accessible only via users with respective administratio
 - [OSINT workflow](/documentation/administration/osint-workflow)
 - [OSINTSources](/documentation/administration/osint-sources)
 - [Report Types & Attributes](/documentation/administration/report-types)
+- [Product Types](/documentation/administration/product-types)
 - [OpenAPI](/documentation/administration/OpenAPI)
 
 ## Screenshots
