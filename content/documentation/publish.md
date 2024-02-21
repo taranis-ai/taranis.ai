@@ -5,7 +5,7 @@ url: "/documentation/publish"
 
 * [Description](#description)
 * [Functionalities](#functionalities)
-* [Screenshots](#screenshots)
+* [Screenshots](#screenshot)
 
 
 ## Description
@@ -21,4 +21,4 @@ Description of options of the left-hand side panel.
 ## Screenshot
 ![screenshot](/documentation/publish-panel.png)
 
-_Note: see also [Product Types](/documentation/administration/product-types)_
+_Note: See also [Product Types](/documentation/administration/product-types)_
