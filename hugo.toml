@@ -1,0 +1,89 @@
+baseURL = "/"
+title = "Taranis AI"
+
+contentDir = "content/en"
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+# Useful when translating.
+enableMissingTranslationPlaceholders = true
+enableRobotsTXT = true
+enableGitInfo = true
+
+pygmentsCodeFences = true
+pygmentsUseClasses = false
+# Use the new Chroma Go highlighter in Hugo.
+pygmentsUseClassic = false
+#pygmentsOptions = "linenos=table"
+# See https://help.farbox.com/pygments.html
+pygmentsStyle = "tango"
+
+# Configure how URLs look like per section.
+[permalinks]
+blog = "/:section/:year/:month/:day/:slug/"
+
+# Image processing configuration.
+[imaging]
+resampleFilter = "CatmullRom"
+quality = 75
+anchor = "smart"
+
+# Language configuration
+
+[languages]
+[languages.en]
+languageName ="English"
+# Weight used for sorting.
+weight = 1
+[languages.en.params]
+title = "Taranis AI"
+description = "Taranis AI is an advanced Open-Source Intelligence (OSINT) tool, leveraging Artificial Intelligence to revolutionize information gathering and situational analysis."
+
+[outputs]
+section = ["HTML", "print", "RSS"]
+
+[params]
+images = ["screenshot.png"]
+copyright = "<span>© 2024 AIT | <a href='/imprint/'>imprint</a></span>"
+
+version_menu = "Releases"
+archived_version = false
+github_repo = "https://github.com/taranis-ai/taranis-ai"
+github_branch= "master"
+
+# Enable Lunr.js offline search
+offlineSearch = true
+
+# Enable syntax highlighting and copy buttons on code blocks with Prism
+prism_syntax_highlighting = false
+
+[params.ui]
+breadcrumb_disable = false
+navbar_logo = true
+# Set to true if you don't want the top navbar to be translucent when over a `block/cover`, like on the homepage.
+navbar_translucent_over_cover_disable = false
+# Enable to show the side bar menu in its compact state.
+sidebar_menu_compact = false
+# Set to true to hide the sidebar search box (the top nav search box will still be displayed if search is enabled)
+sidebar_search_disable = false
+
+[params.ui.readingtime]
+enable = false
+
+[params.links]
+[[params.links.developer]]
+  name = "GitHub"
+  url = "https://github.com/taranis-ai/taranis-ai"
+  icon = "fab fa-github"
+  desc = "GitHub Repository"
+
+# hugo module configuration
+
+[module]
+  # Uncomment the next line to build and serve using local docsy clone declared in the named Hugo workspace:
+  # workspace = "docsy.work"
+  [module.hugoVersion]
+    extended = true
+    min = "0.110.0"
+  [[module.imports]]
+    path = "github.com/google/docsy"
+    disable = false

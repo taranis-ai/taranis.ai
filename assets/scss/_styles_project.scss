@@ -1,0 +1,40 @@
+
+.footer_attribution {
+  font-size: 16px;
+  color: var(--primary);
+  padding: 0 20px;
+  text-align: center;
+}
+
+.footer-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.imprint {
+  margin-top: 90px;
+}
+
+.td-footer {
+  min-height: 42px !important;
+  padding-top: 1rem !important
+}
+
+.media-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  margin-top: 10px;
+}
+
+.media-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+}
