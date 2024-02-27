@@ -11,4 +11,5 @@ see: [Swagger UI](https://swagger.io/tools/swagger-ui/)
 
 ## Screenshots
 Taranis instance is alive
+
 ![openapi](/docs/openapi.png)

@@ -5,13 +5,6 @@ description: >
 weight: 8
 ---
 
-1. [Description](#description)
-1. [Prebuilt Product Types](#prebuilt-product-types)
-1. [Editing Product Types](#editing-product-types)
-1. [Create new Product Type with example](#create-new-product-types)
-1. [Advanced behaviour](#advanced-behaviour)
-
-
 ## Prebuilt Product Types
 - CERT Daily Report
 - Default HTML Presenter

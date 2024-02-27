@@ -14,7 +14,7 @@ A user wants to see the most important news topics, so that he can find relevant
 A user wants to find News Items by searching for any text string. 
 He wants to get ranked list of results to further work with. 
 
-https://dev.taranis.cyberrange.rocks/assess?search=Asus&range=week
+https://dev.taranis.ai/assess?search=CVE&range=week
 
 ## Vote on article
 A user wants to mark an item as important, so that it is easier to find later. 
@@ -22,18 +22,18 @@ A user wants to mark an item as important, so that it is easier to find later.
 ## Tags 
 A user wants to find news times based on an “tag”, an attribute or an important keyword, so that he can easier find relevant news items. 
 
-https://dev.taranis.cyberrange.rocks/assess?tags=ICSA-23-166-01 
+https://dev.taranis.ai/assess?tags=Microsoft
 
-https://dev.taranis.cyberrange.rocks/assess?tags=Siemens&tags=ICSA-23-166-10
+https://dev.taranis.ai/assess?tags=Microsoft&tags=Windows
 
-=> Tag filter can result in empty Storylist: https://dev.taranis.cyberrange.rocks/assess?tags=Siemens&tags=ICSA-23-166-10&tags=Deutschland&tags=xxxxx
+=> Tag filter can result in empty Storylist: https://dev.taranis.ai/assess?tags=Siemens&tags=ICSA-23-166-10&tags=Deutschland&tags=xxxxx
 
 
 
 ## Create Report 
 A User wants to create a Report. So that it can later be shared. 
 
-https://dev.taranis.cyberrange.rocks/report/0
+https://dev.taranis.ai/report/0
 
 
 ## Create and edit News Item

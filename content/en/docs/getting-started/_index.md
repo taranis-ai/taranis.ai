@@ -7,9 +7,5 @@ weight: 2
 
 ## Developers
 
-
-## Production Deployment
-
-
-## Demo
+See [docker/dev](https://github.com/taranis-ai/taranis-ai/tree/master/docker/dev) for instructions on how to start at dev setup.
 

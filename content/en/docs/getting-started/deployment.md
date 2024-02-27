@@ -37,6 +37,8 @@ http://<url>:<TARANIS_NG_PORT>/login
 
 **The default credentials are `user` / `user` and `admin` / `admin`.**
 
+The passwords for these two default users can be overriden by setting the environment variables `PRE_SEED_PASSWORD_ADMIN` or `PRE_SEED_PASSWORD_USER` before first launch.
+Afterwards they are stored in the database in the `user` table.
 
 Open `http://<url>:<TARANIS_NG_PORT>/config/sources` and click **Import** to import json-file with sources (see below).
 

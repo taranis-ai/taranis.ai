@@ -12,4 +12,4 @@ Taranis AI provides following functionalities:
 - [Analyze](/docs/analyze)
 - [Dashboard](/docs/dashboard)
 - [Administration](/docs/admin) 👤
-- [User settings](/docs/user-settings)
+- [User settings](/docs/settings)

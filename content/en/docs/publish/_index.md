@@ -17,5 +17,5 @@ Description of options of the left-hand side panel.
 ![screenshot](/docs/publish-panel.png)
 
 {{% pageinfo %}}
-See also [Product Types](/docs/administration/product-types)_
+See also [Product Types](/docs/admin/product-types/)_
 {{% /pageinfo %}}

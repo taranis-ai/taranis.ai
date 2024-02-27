@@ -20,13 +20,17 @@ Desired attributes need to be created first. Then they can be managed by the adm
 
 ## Screenshots
 Add new Attribute
+
 ![report_type_add_attribute](/docs/add_attribute.png)
 
 Report Types -  Create new Report Type
+
 ![report_type_create](/docs/report_type_add_new_attribute.png)
 
 Report Types - Add new Attribute Group
+
 ![report_type_group](/docs/report_type_group.png)
 
 Report Types - Select new Attribute from list
+
 ![report_type_selecet_attribute](/docs/report_type_select_attribute.png)
