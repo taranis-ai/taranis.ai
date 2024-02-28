@@ -18,9 +18,8 @@ weight: 2
 - CRUD: Sources can be created, updated and deleted. For each source a collector, feed URL and the content location can be defined among other things.
 
 {{% pageinfo %}}
-To get started there is list of RSS sources we worked with: [Initial setup](/docs/deployment/#initial-setup-)_
+To get started there is list of RSS sources we worked with: [Initial setup](/docs/getting-started/deployment/#initial-setup-)_
 {{% /pageinfo %}}
-
 
 ![osint_sources](/docs/osint/osint-sources.png)
 

@@ -47,7 +47,8 @@ copyright = "<span>© 2024 AIT | <a href='/imprint/'>imprint</a></span>"
 
 version_menu = "Releases"
 archived_version = false
-github_repo = "https://github.com/taranis-ai/taranis-ai"
+github_repo = "https://github.com/taranis-ai/taranis.ai"
+github_project_repo = "https://github.com/taranis-ai/taranis-ai"
 github_branch= "master"
 
 # Enable Lunr.js offline search
