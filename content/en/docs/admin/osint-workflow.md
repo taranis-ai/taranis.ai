@@ -1,5 +1,6 @@
 ---
 title: "OSINT workflow"
+description: General usage of Taranis AI
 weight: 2
 ---
 

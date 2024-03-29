@@ -1,5 +1,6 @@
 ---
 title: "Collectors"
+description: "Collectors are used to gather data from various sources."
 weight: 5
 ---
 
