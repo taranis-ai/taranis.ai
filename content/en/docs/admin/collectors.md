@@ -9,6 +9,9 @@ weight: 5
 2. [Simple Web Collector](#simple-web-collector)
 3. [RT Collector](#rt-collector)
 
+The administration view now allows to use the Preview feature to see the result of the configuration without the items being processed further for Assess view.
+This feature is available for RSS, Simple Web and RT collector.
+
 ## RSS Collector
 RSS Collector enables Taranis AI to collect data from a user-defined RSS feed (See [RSS feeds details](https://rss.com/blog/how-do-rss-feeds-work/)).
 * Required fields: 
@@ -18,6 +21,8 @@ RSS Collector enables Taranis AI to collect data from a user-defined RSS feed (S
   * CONTENT_LOCATION
   * PROXY_SERVER
   * REFRESH_INTERVAL
+  * Digest Splitting On/Off
+  * DIGEST_SPLITTING_LIMIT (default: 30)
 
 ### Basic configuration
 * Example: 
@@ -28,6 +33,12 @@ The RSS Collector supports the use of XPath for locating elements. (See Simple W
 * Example:
   * **FEED_URL**: https://www.bsi.bund.de/SiteGlobals/Functions/RSSFeed/RSSNewsfeed/RSSNewsfeed.xml
   * **XPATH**: //*[@id="getting-started-web-console-creating-new-project_openshift-web-console"]
+
+### Digest Splitting
+Digest Splitting is a feature that allows the user to split all available URLs in the RSS feed into individual News Items.
+The Digest Splitting Limit is the maximum number of URLs that will be split into individual News Items. If the limit is reached, the remaining URLs are dropped.
+The Digest Splitting Limit is set to 30 by default but can be adjusted by the administrator. It is generally recommended to keep the limit low to avoid overloading the system, which could lead to unsuccessful gathering.
+
 
 ## Simple Web Collector
 Simple Web Collector enables Taranis AI to collect data using web URLs and XPaths.
