@@ -9,7 +9,7 @@ weight: 5
 2. [Simple Web Collector](#simple-web-collector)
 3. [RT Collector](#rt-collector)
 
-The administration view now allows to use the Preview feature to see the result of the configuration without the items being processed further for Assess view.
+The administration view now allows users to use the Preview feature to see the result of the configuration without the items being processed further for the Assess view.
 This feature is available for RSS, Simple Web and RT collector.
 
 ## RSS Collector
