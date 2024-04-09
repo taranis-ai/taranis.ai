@@ -9,7 +9,7 @@ weight: 6
 2. [FTP Publisher](#ftp-publisher)
 
 ## Email Publisher
-The Email Publisher allows to send out Products.
+The Email Publisher allows sending out Products.
 
 * Fields:
     * SMTP_SERVER_ADDRESS*: Address of the SMTP server.
