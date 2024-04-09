@@ -25,6 +25,5 @@ _Required fields are marked with a *._
 
 ### General usage
 Once the publisher is created, it becomes available in the "Publish" section of each product.
-To send out a product via email, the product must be "Rendered" first. To render a product use the option available in the product's view.
-
+To send out a product via email, the product must be "Rendered" first. To render a product, use the option available in the product's view.
 
