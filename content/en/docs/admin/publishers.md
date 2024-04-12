@@ -17,9 +17,11 @@ The Email Publisher allows sending out Products.
     * SERVER_TLS: Enable/Disable TLS.
     * EMAIL_USERNAME: Login username for the SMTP server.
     * EMAIL_PASSWORD: Login password for the SMTP server.
-    * EMAIL_SENDER*: This will be displayed as the sender of the email.
-    * EMAIL_RECIPIENT*: This is the email address of the recipient. It is possible to use only one email recipient.
+    * EMAIL_SENDER*: Sender of the email for message envelope.
+    * EMAIL_RECIPIENT*: Email address of the recipient for message envelope. It is possible to use only one email recipient.
     * EMAIL_SUBJECT: Subject of the email.
+
+_Note: The EMAIL_SENDER and EMAIL_RECIPIENT parameters are used to construct the message envelope used by the transport agents. Message headers are not modified be these parameters in any way._
 
 _Required fields are marked with a *._
 
