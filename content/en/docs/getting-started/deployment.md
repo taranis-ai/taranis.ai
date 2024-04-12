@@ -1,7 +1,6 @@
 ---
 title: Deployment
-description: >
-  A short lead description about this content page. It can be **bold** or _italic_ and can be split over multiple paragraphs.
+description: How to deploy Taranis AI
 ---
 
 
@@ -30,17 +29,17 @@ docker compose up -d
 
 Use the application 
 ```bash
-http://<url>:<TARANIS_NG_PORT>/login
+http://<url>:<TARANIS_PORT>/login
 ```
 
 ## Initial Setup 👤
 
 **The default credentials are `user` / `user` and `admin` / `admin`.**
 
-The passwords for these two default users can be overriden by setting the environment variables `PRE_SEED_PASSWORD_ADMIN` or `PRE_SEED_PASSWORD_USER` before first launch.
+The passwords for these two default users can be overridden by setting the environment variables `PRE_SEED_PASSWORD_ADMIN` or `PRE_SEED_PASSWORD_USER` before first launch.
 Afterwards they are stored in the database in the `user` table.
 
-Open `http://<url>:<TARANIS_NG_PORT>/config/sources` and click **Import** to import json-file with sources (see below).
+Open `http://<url>:<TARANIS_PORT>/config/sources` and click **Import** to import json-file with sources (see below).
 
 Example RSS Sources:
 
