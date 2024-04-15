@@ -6,38 +6,22 @@ weight: 15
 
 
 ## Topics Dashboard
-
-A user wants to see the most important news topics, so that he can find relevant news items easier. 
- 
+As an OSINT analyst using the Taranis tool, I require access to a Topics Dashboard feature that displays the most important news topics. This dashboard should prioritize the most frequently occurring tags, offering a snapshot of the prevailing themes and subjects within the collected news items. 
 
 ## Search, Filter and Sort
-A user wants to find News Items by searching for any text string. 
-He wants to get ranked list of results to further work with. 
-
-https://dev.taranis.ai/assess?search=CVE&range=week
+As an OSINT analyst using the Taranis tool, I need the capability to search for news items by entering any text string. This feature should provide a ranked list of results based on the relevance to the search query, enabling me to quickly and effectively identify the most pertinent articles for further analysis. 
 
 ## Vote on article
-A user wants to mark an item as important, so that it is easier to find later. 
- 
+As an OSINT analyst using the Taranis tool, I need the ability to mark news items as important by voting on them. This feature should allow me to quickly identify and categorize significant articles for easy retrieval at a later time. The interface should provide a straightforward mechanism, such as a voting button or a star icon, to designate an item as important. 
+
 ## Tags 
-A user wants to find news times based on an “tag”, an attribute or an important keyword, so that he can easier find relevant news items. 
-
-https://dev.taranis.ai/assess?tags=Microsoft
-
-https://dev.taranis.ai/assess?tags=Microsoft&tags=Windows
-
-=> Tag filter can result in empty Storylist: https://dev.taranis.ai/assess?tags=Siemens&tags=ICSA-23-166-10&tags=Deutschland&tags=xxxxx
-
-
+As an OSINT analyst using the Taranis tool, I need the ability to filter news items based on tags, attributes, or important keywords. This feature should allow me to quickly find relevant news items by applying a tag filter within the tool. The interface should provide an option to enter or select tags, and display the filtered results. In scenarios where no news items match the selected tags, it should result in an empty story list. 
 
 ## Create Report 
-A User wants to create a Report. So that it can later be shared. 
-
-https://dev.taranis.ai/report/0
-
+As an OSINT analyst using the Taranis tool, I require a feature to create reports directly within the Analyse view. To generate a new report, I should be able to click on a "New Report" button, select the type of report item I wish to include, title the report, and then save it. This process allows me to efficiently group stories and news items together.
 
 ## Create and edit News Item
-
+As an OSINT analyst using the Taranis tool, I need a feature that enables me to create news items, specifying details such as title, publish date, review, link, article content, and attributes. For news items I manually create, there should be no option to add or edit tags. However, news items automatically gathered from OSINT sources should include automatically created tags that I can edit. To maintain data integrity, the editing function will be disabled for any news item once it is included in a report. For ease of use, each news item has an edit button in the Asses view.  
 User Story defined by the following issues:
 
 [#100](https://github.com/taranis-ai/taranis-ai/issues/100) [#101](https://github.com/taranis-ai/taranis-ai/issues/101) [#102](https://github.com/taranis-ai/taranis-ai/issues/102)
@@ -45,23 +29,22 @@ User Story defined by the following issues:
 # Admin Stories 
 
 ## Word Lists
-An admin wants to use Word Lists to either Filter News Items while collecting, or enhance them with a Bot.
-The admin should be able to import & export a wordlist. And use the wordlist based on its designated usage.
-For example to add Tags with the word_list_bot.
+ As an admin of the Taranis tool, I need the ability to utilize Word Lists for filtering news items during collection or enhancing them with a Bot. This includes the capability to import and export word lists and apply them based on their designated usage, such as adding tags with the word_list_bot.
 
 ![wordlist workflow](/docs/word_list_workflow.png)
 
-
 ## Configure Sources
-An admin wants to configure OSINT Sources to be gathered.
+As an admin in Taranis, I need to configure OSINT sources to be gathered for intelligence gathering purposes.
 
 ## Configure Report Types
-An admin wants to configure new Report Types. 
-
-
+As an admin in Taranis, I need the ability to configure new report types.
 ## Configure Users
-An admin wants to create and delete users. They want to ensure they have the necessary access for their task. 
-
+As an admin in Taranis, I need to manage user accounts by creating and deleting users, ensuring they have the necessary access for their tasks.
 
 ## Configure ACLs and roles
-An admin wants to define which permissions each role has. 
+As an admin user of the Taranis tool, I need to configure Access Control Lists (ACLs) and roles to define permissions for each role. This allows me to effectively manage user permissions, control access to sensitive information, and maintain compliance with organizational policies and regulations.
+
+
+
+
+
