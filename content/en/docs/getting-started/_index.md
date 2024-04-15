@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-description: What does your user need to know to try your project?
+description: Information on how to get started with Taranis AI
 tags: [setup, deployment]
 weight: 2
 ---
