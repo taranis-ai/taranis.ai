@@ -1,5 +1,6 @@
 ---
 title: "OSINTSources"
+description: "Sources for gathering data are set in the OSINTSources. It is possible to create a new source, import sources, export sources, and collect from sources."
 weight: 3
 ---
 

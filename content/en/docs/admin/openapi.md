@@ -1,5 +1,6 @@
 ---
 title: "OpenAPI"
+description: "The admin user can access the Taranis API through Swagger UI. Swagger UI displays OpenAPI specifications as an interactive API documentation."
 weight: 10
 ---
 
