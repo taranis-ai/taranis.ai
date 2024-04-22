@@ -21,7 +21,7 @@ The Email Publisher allows sending out Products.
     * EMAIL_RECIPIENT*: Email address of the recipient for message envelope. It is possible to use only one email recipient.
     * EMAIL_SUBJECT: Subject of the email.
 
-_Note: The EMAIL_SENDER and EMAIL_RECIPIENT parameters are used to construct the message envelope used by the transport agents. Message headers are not modified be these parameters in any way._
+_Note: The EMAIL_SENDER and EMAIL_RECIPIENT parameters are used to construct the message envelope used by the transport agents. Message headers are not modified by these parameters in any way._
 
 _Required fields are marked with a *._
 
