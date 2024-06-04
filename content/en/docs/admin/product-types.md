@@ -19,7 +19,7 @@ All crucial fields are editable, with the most important being Type, Template, a
 - Template: Users can select from prebuilt templates or add new ones.
 - Report Types: This field determines which types of reports can be added to the products.
 
-![product-type-edit](/docs/product-type-edit.png)
+![product-type-edit](/docs/product_type_edit.png)
 
 ## Create new Product Types
 
