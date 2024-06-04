@@ -40,7 +40,7 @@ Word lists can have the following functionalities (displayed under "usage"):
 - Tagging Bot: Collected news items will be tagged with words from these word lists
 - Collector Includelist & Tagging Bot: A word list can be used for tagging and include listing
 
-![wordlist_usage](/docs/osint/wordlist-usage.png)
+![wordlist_usage](/docs/osint/wordlist_usage.png)
 
 ## 4. Enable include/exclude list filtering
 
@@ -48,7 +48,7 @@ To activate include or exclude lists, they need to be added to the default sourc
 
 It has to be mentioned, that this include/exclude filtering happens during the news item collection. Therefore, only filtered news items will be stored in the database and displayed in "Assess".
 
-![source_groups](/docs/osint/source-groups.png)
+![source_groups](/docs/osint/source_groups.png)
 
 ## 5. Bot selection
 
@@ -68,7 +68,7 @@ Index: Decides the order of bots
 
 RUN_AFTER_COLLECTOR: Indicates if bot is active after collection
 
-![bot_selection](/docs/osint/bot-selection.png)
+![bot_selection](/docs/osint/bot_selection.png)
 
 ## 6. Collect Sources
 
