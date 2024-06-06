@@ -1,7 +1,4 @@
 #!/bin/bash
-exclude_files = ["osint-sources.png", "dashboard.png"]
-
-#!/bin/bash
 
 # Check if the correct number of arguments is provided
 if [ "$#" -ne 2 ]; then
@@ -25,14 +22,14 @@ if [ ! -d "$destination_path" ]; then
     exit 1
 fi
 
-# Define an array of filenames to skip
+# Pictures to skip
 skip_files=("docs_osint_sources.png" "docs_dashboard.png" "docs_osint_sources_add.png")
 
-# Define an array of filenames to copy to the osint subfolder
+# Pictures to copy to static/docs/osint
 osint_files=("docs_bot_selection.png" "docs_source_groups.png" "docs_wordlist_usage.png" "docs_wordlists.png")
 
-# Define the filename to copy to the parent directory of the destination
-parent_dir_file="docs_assess_landing_page.png"
+# Pictures to copy to static/docs
+parent_dir_file="example_docs_assess_landing_page.png"
 
 # Function to check if an element is in an array
 contains() {
