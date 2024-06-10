@@ -20,7 +20,7 @@ RSS Collector enables Taranis AI to collect data from a user-defined RSS feed (S
   * USER_AGENT
   * CONTENT_LOCATION
   * PROXY_SERVER
-  * REFRESH_INTERVAL
+  * REFRESH_INTERVAL (see [Bots - refresh_interval](/docs/admin/bots/#bot's-settings))
   * Digest Splitting On/Off
   * DIGEST_SPLITTING_LIMIT (default: 30)
 
