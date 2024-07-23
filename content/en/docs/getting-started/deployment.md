@@ -1,6 +1,7 @@
 ---
 title: Deployment
 description: How to deploy Taranis AI
+weight: 1
 ---
 
 
@@ -17,7 +18,9 @@ Copy `env.sample` to `.env`
 cp env.sample .env
 ```
 
-Open file `.env` and defaults if needed
+Open file `.env` and change defaults if needed. More details about environment variables can be found [here](https://github.com/taranis-ai/taranis-ai/blob/master/docker/README.md).
+
+See [Advanced monitoring](./advanced-monitoring.md) for more logging insights.
 
 
 ## Startup & Usage 

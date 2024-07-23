@@ -1,6 +1,6 @@
 ---
 title: "Bots"
-description: "Bots are increasing functuionalities in the background"
+description: "Bots are increasing functionalities in the background"
 weight: 5
 ---
 
