@@ -1,6 +1,7 @@
 ---
 title: "Administration"
 weight: 10
+description: Administration section and general workflow
 ---
 
 {{% pageinfo %}}
