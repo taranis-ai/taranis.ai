@@ -1,6 +1,7 @@
 ---
 title: Deployment
 description: How to deploy Taranis AI
+weight: 1
 ---
 
 
