@@ -34,11 +34,6 @@ The RSS Collector supports the use of XPath for locating elements. (See Simple W
   * **FEED_URL**: https://www.bsi.bund.de/SiteGlobals/Functions/RSSFeed/RSSNewsfeed/RSSNewsfeed.xml
   * **XPATH**: //*[@id="getting-started-web-console-creating-new-project_openshift-web-console"]
 
-### Digest Splitting
-Digest Splitting is a feature that allows the user to split all available URLs in the RSS feed into individual News Items.
-The Digest Splitting Limit is the maximum number of URLs that will be split into individual News Items. If the limit is reached, the remaining URLs are dropped.
-The Digest Splitting Limit is set to 30 by default but can be adjusted by the administrator. It is generally recommended to keep the limit low to avoid overloading the system, which could lead to unsuccessful gathering.
-
 
 ## Simple Web Collector
 Simple Web Collector enables Taranis AI to collect data using web URLs and XPaths.
@@ -69,3 +64,10 @@ RT Collector enables Taranis AI to collect data from a user-defined RT instance.
 
 * Optional fields:
   * **TLP_LEVEL**
+
+## Digest Splitting
+Digest Splitting is a feature that allows the user to split all available URLs in the located element into individual News Items.
+The Digest Splitting Limit is the maximum number of URLs that will be split into individual News Items. If the limit is reached, the remaining URLs are dropped.
+The Digest Splitting Limit is set to 30 by default but can be adjusted by the administrator. It is generally recommended to keep the limit low to avoid overloading the system, which could lead to unsuccessful gathering.
+
+_Note: Digest splitting can fail if the web page contains JavaScript. As of now, there is no workaround but it might be improved in the future releases._
