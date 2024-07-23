@@ -70,4 +70,4 @@ Digest Splitting is a feature that allows the user to split all available URLs i
 The Digest Splitting Limit is the maximum number of URLs that will be split into individual News Items. If the limit is reached, the remaining URLs are dropped.
 The Digest Splitting Limit is set to 30 by default but can be adjusted by the administrator. It is generally recommended to keep the limit low to avoid overloading the system, which could lead to unsuccessful gathering.
 
-_Note: Digest splitting can fail if the web page contains JavaScript. As of now, there is no workaround but it might be improved in the future releases._
+[Simple Web Collector](#simple-web-collector) will fail if the web page content is only available with JavaScript. Switching to the Selenium based "Web Collector" will allow parsing JavaScript based websites, but as of right now "Web Collector" does not support Digest Splitting.
