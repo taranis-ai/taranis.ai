@@ -9,7 +9,7 @@ Upon logging in, the analyst is greeted by the Dashboard which prominently displ
 For efficient work, please review the available hotkeys.
 
 # Assess
-For easier filtering, in the user settings consider setting the "End of Shift".
+For easier filtering, set the "End of Shift" in the user settings.
 To assess your items, go to the Assess section and set the time filter. Apply the "not read" and "not important" filters. Mark as read any items that have been read but considered as unimportant , then work 
 through these items until all are marked as read, only checking summaries. Next, set the filter to "not read" and "important". Verify the importance of each item and mark it 
 as read if not important. Check if the item is in an older report and determine if it adds more value; if not, remove "important" and mark as read. Merge items discussing 
@@ -27,7 +27,7 @@ If a story needs editing or creation, the analyst can do so directly within the 
 Once the relevant stories are collected and reviewed, the analyst returns to the Analyze tab to finalize the report, marking it as completed. This marks the transition from collection and review to dissemination.
 
 # Analyze
-For easier filtering, in the user settings consider setting the "End of Shift".
+For easier filtering, set the "End of Shift" in the user settings.
 To analyze your items, go to the Analyze section and review them as done in Assess by merging and removing items. Ensure everything is ready for a final review. Add news items to the appropriate categories, save, and mark the process as completed.
 
 # Publish
