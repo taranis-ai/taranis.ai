@@ -13,20 +13,29 @@ Assess displays a list of collected news items from various sources, which can b
 
 ## Functionalities
 ### Filters
+
+![AssessFilters](/docs/assess-nav-annotaded.png)
+
 * Search: Items can be filtered by string search
-* Display: Number of items displayed per page 
-* Offset: Number that defines first item displayed
+* Items per page: Number of items displayed per page
 * Source group: Filter items by a particular source group
 * Source: Filter items by source 
-* Range: Filter time range (all, today, last week)
+* Time Filter:
+    * Filter time range (all, today, last week)
 * Tags: Filter by item's tag
+    * A Tag is an attribute of a story that usually was extracted by a bot or added by an analyst. It helps analyst finding similar news items and the story clustering bot to create stories.
 * Read, important, items in reports, relevant: Filter by item's state
 * Sort: Filter by published date, relevance
-* [DEBUG] Chart properties: Change threshold and range of second y-axis in item's graphic
-* [DEBUG] Reload: Update news items
+* Reset filter: Reset all filters and reload news items
+* create new item: Opens enter view to create a manual news item
+* Show Hotkeys: Open a modal to show available hotkeys
 
 ### Items
 Items in list view:
+
+![AssessStory](/docs/assess-story.png)
+
+
 * Open & Details: Each item or item aggregation can be displayed in more detail
 * Add to report: Add item to a report 
 * Unread, mark as read, mark as important: Item's state changes

@@ -4,7 +4,7 @@ description: General usage of Taranis AI
 weight: 2
 ---
 
-# Functionalities
+## Functionalities
 
 1. [Create OSINT Sources](#1-create-osint-sources)
 1. [Add word lists](#2-add-word-lists)

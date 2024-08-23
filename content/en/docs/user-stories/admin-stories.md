@@ -1,5 +1,5 @@
 ---
-title: User Stories [Administrator]
+title: User Stories [Admin]
 description: User Stories as seen from the perspective of an Taranis AI Administrator.
 weight: 15
 ---
