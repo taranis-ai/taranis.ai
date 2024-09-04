@@ -14,7 +14,7 @@ Assess displays a list of collected news items from various sources, which can b
 ## Functionalities
 ### Filters
 
-![AssessFilters](/docs/assess-nav-annotaded.png)
+![AssessFilters](/docs/assess-nav-annotated.png)
 
 ### Items
 Items in list view:
