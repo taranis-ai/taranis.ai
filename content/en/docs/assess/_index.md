@@ -18,8 +18,8 @@ Assess displays a list of collected news items from various sources, which can b
 
 ##### Details:
 
-- **First Day**: Refers to the Story's creation date, typically corresponding to the "published date" of the oldest News Item.
-- **Last Day**: Refers to the Story's last update date, usually indicating the most recent addition or modification to the Story.
+- **First Day**: The Story's creation date, typically matching the oldest News Item's "published date."
+- **Last Day**: The Story's update date, usually reflecting the latest addition or change.
 
 For **manually created stories**, the "updated" timestamp is essentially the creation time. As a result, filtering by **Last day** for a manually created story will not return it, even if an older "published date" is set.
 
