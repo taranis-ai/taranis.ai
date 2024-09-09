@@ -16,8 +16,16 @@ Assess displays a list of collected news items from various sources, which can b
 
 ![AssessFilters](/docs/assess-nav-annotated.png)
 
+##### Details:
+
+- **First Day**: The Story's creation date, typically matching the oldest News Item's "published date."
+- **Last Day**: The Story's update date, usually reflecting the latest addition or change.
+
+For **manually created stories**, the "updated" timestamp is essentially the creation time. As a result, filtering by **Last day** for a manually created story will not return it, even if an older "published date" is set.
+
+
 ### Items
-Items in list view:
+News items collected by [Collectors](../admin/collectors.md) become visible in the Assess section. These items can later be grouped by context, either automatically by the [Bots](../admin/bots.md) or manually.
 
 ![AssessStory](/docs/assess-story.png)
 
