@@ -14,7 +14,7 @@ Description of options of the left-hand side panel.
 * Filter: Show items created today, this week, or this month
 
 ## Screenshot
-![screenshot](/docs/publish-panel.png)
+![screenshot](/docs/publish_panel.png)
 
 {{% pageinfo %}}
 See also [Product Types](/docs/admin/product-types/)_
