@@ -1,5 +1,5 @@
 ---
-title: User Workflow
+title: Workflow [Analyst]
 description: End to End 'user flow' for an analyst.
 weight: 15
 ---
@@ -9,7 +9,7 @@ Upon logging in, the analyst is greeted by the Dashboard which prominently displ
 To enhance workflow efficiency, please review the available hotkeys.
 Additionally, for simplified filtering, set the "End of Shift" time in the user settings. This feature allows the system to display only articles published since the last end of shift, ensuring you see content that hasn't been reviewed yet.
 
-# Assess
+## Assess
 To assess your items, go to the **Assess** section and set the time filter. Apply the **"not read"** and **"not important"** filters. Mark as read any items that have been read but are considered unimportant. Continue working through these items until all are marked as read, focusing only on checking summaries.
 
 Next, set the filter to **"not read"** and **"important"**. Verify the importance of each item and mark it as read if not important. Check whether the item is part of an older report and determine if it still adds value. If not, remove the **"important"** tag and mark the item as read. If multiple items discuss the same topic, merge them.
@@ -19,7 +19,7 @@ To update a summary manually or with AI, first click the **"Edit Story"** button
 Finally, remove the **"important"** tag and mark the item as read. For greater efficiency, consider using the time filter to focus on the most recent content.
 
 
-## Additional tasks during assess
+### Additional tasks during assess
 During the review process in the Assess tab, the analyst has several tools at their disposal to optimize their workflow:
 
 **Voting on Stories:**
@@ -33,8 +33,8 @@ Tag filters can be applied to narrow down the selection to the most relevant art
 
 Once all relevant stories are collected and reviewed, the analyst moves to the Analyze tab to finalize the report and mark it as completed. This step transitions the process from review to dissemination
 
-# Analyze
+## Analyze
 To analyze your items, go to the Analyze section and review them as done in Assess by merging and removing items. Ensure everything is ready for a final review. Add news items to the appropriate categories, save, and mark the process as completed.
 
-# Publish
+## Publish
 Finally, the Publish tab is where the compiled report transforms into a product ready for external consumption. The analyst chooses a product type that fits the report, reviews the final product via a rendered preview, and selects a publication destination from a managed list. This final step disseminates the insights gathered and analyzed, extending the impact of the analyst’s work beyond the confines of Taranis AI.

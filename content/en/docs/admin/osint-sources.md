@@ -4,7 +4,7 @@ description: "Sources for gathering data are set in the OSINTSources. It is poss
 weight: 3
 ---
 
-# Functionalities
+## Functionalities
 Sources for gathering data are set in the **OSINTSources**. It is possible to:
 - [Create a new source](#create-a-new-source)
 - [Import sources](#import-sources)

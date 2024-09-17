@@ -13,25 +13,21 @@ Assess displays a list of collected news items from various sources, which can b
 
 ## Functionalities
 ### Filters
-* Search: Items can be filtered by string search
-* Display: Number of items displayed per page 
-* Offset: Number that defines first item displayed
-* Source group: Filter items by a particular source group
-* Source: Filter items by source 
-* Range: Filter time range (all, today, last week)
-* Tags: Filter by item's tag
-* Read, important, items in reports, relevant: Filter by item's state
-* Sort: Filter by published date, relevance
-* [DEBUG] Chart properties: Change threshold and range of second y-axis in item's graphic
-* [DEBUG] Reload: Update news items
+
+![AssessFilters](/docs/assess-nav-annotated.png)
+
+##### Details:
+
+- **First Day**: The Story's creation date, typically matching the oldest News Item's "published date."
+- **Last Day**: The Story's update date, usually reflecting the latest addition or change.
+
+For **manually created stories**, the "updated" timestamp is essentially the creation time. As a result, filtering by **Last day** for a manually created story will not return it, even if an older "published date" is set.
+
 
 ### Items
-Items in list view:
-* Open & Details: Each item or item aggregation can be displayed in more detail
-* Add to report: Add item to a report 
-* Unread, mark as read, mark as important: Item's state changes
-* Delete: Delete item
-* If multiple items are selected, those can be merged or added to reports at once (buttons in bottom bar appear).  
+News items collected by [Collectors](../admin/collectors.md) become visible in the Assess section. These items can later be grouped by context, either automatically by the [Bots](../admin/bots.md) or manually.
+
+![AssessStory](/docs/assess-story.png)
 
 Detail view: 
 * Relevance of item/aggregate can be changed with "up/down" buttons 
