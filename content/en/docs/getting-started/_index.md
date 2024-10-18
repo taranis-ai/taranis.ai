@@ -2,7 +2,7 @@
 title: Getting Started
 description: Information on how to get started with Taranis AI
 tags: [setup, deployment]
-weight: 2
+weight: 1
 ---
 
 ## Developers
