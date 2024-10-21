@@ -1,7 +1,7 @@
 ---
 title: Advanced monitoring
 description: Use Sentry for more runtime insights
-weight: 2
+weight: 5
 ---
 
 ### Prerequisites
