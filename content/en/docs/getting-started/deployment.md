@@ -6,7 +6,8 @@ weight: 1
 
 
 Clone via git
-```
+
+```bash
 git clone --depth 1  https://github.com/taranis-ai/taranis-ai
 cd taranis-ai/docker/
 ```
@@ -14,6 +15,7 @@ cd taranis-ai/docker/
 ## Configuration
 
 Copy `env.sample` to `.env`
+
 ```bash
 cp env.sample .env
 ```
@@ -22,15 +24,16 @@ Open file `.env` and change defaults if needed. More details about environment v
 
 See [Advanced monitoring](./advanced-monitoring.md) for more logging insights.
 
-
-## Startup & Usage 
+## Startup & Usage
 
 Start-up application
+
 ```bash
 docker compose up -d
 ```
 
-Use the application 
+Use the application
+
 ```bash
 http://<url>:<TARANIS_PORT>/login
 ```
