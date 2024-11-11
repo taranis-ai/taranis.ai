@@ -68,6 +68,20 @@ When content cannot be reliably collected using the [Basic configuration](#basic
 (See [tutorial how to find it](https://www.appsierra.com/blog/how-to-get-xpath-in-chrome)), can be useful. 
 It is crucial to specify the XPath of the precise element containing the desired data.
 
+### Configuration for Mastodon Feeds
+To set up an RSS Collector for collecting posts from a Mastodon hashtag or user, follow these steps:
+1. **Finding the Mastodon RSS Feed URL**:
+   - **Hashtag Feed**: Add `.rss` to the hashtag URL. For example, to collect posts tagged with #cybersecurity:
+     ` https://mastodon.social/tags/cybersecurity.rss `
+   - **User Feed**: Similarly, add `.rss` to the user's profile URL. Example:
+     ` https://mastodon.social/@username.rss `
+
+2. **Creating a New RSS Source with Required Parameters**:
+When creating the new RSS source, configure it with the following parameters. Here’s an example of how to fill out the fields:
+     - **FEED_URL**: Enter the RSS feed URL for the Mastodon hashtag or user (e.g., `https://mastodon.social/tags/cybersecurity.rss`).
+     - **CONTENT_LOCATION**  Set this to `"summary"` to specify the main content location within each RSS entry.
+     - **REFRESH_INTERVAL**  Set the refresh interval in seconds for the frequency of updates.
+     - **DIGEST_SPLITTING** is set to `"false"` since we’re not splitting entries into multiple items.
 
 ## RT Collector
 RT Collector enables Taranis AI to collect data from a user-defined [Request Tracker](https://bestpractical.com/request-tracker) instance.
