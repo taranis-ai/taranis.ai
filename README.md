@@ -8,11 +8,20 @@ This repository contains the website 'taranis.ai' which is the documentation for
 [!NOTE]  
 This repository uses git-lfs
 
+### Requirements
+
+* [go](https://go.dev/doc/install)
+* [hugo-extended](https://github.com/gohugoio/hugo)
+
+Run ```hugo mod get``` and ```hugo mod tidy``` to install & cleanup required modules.
+
 Start the local server with
 
 ```bash
 hugo server
 ```
+
+
 
 ## Deploy
 
