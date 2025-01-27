@@ -4,9 +4,13 @@ This repository contains the website 'taranis.ai' which is the documentation for
 
 
 ## Develop
-*Note: Clone the repository with Git LFS if you want to update the Video.* 
 
-```
+[!NOTE]  
+This repository uses git-lfs
+
+Start the local server with
+
+```bash
 hugo server
 ```
 
