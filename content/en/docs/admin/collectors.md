@@ -83,6 +83,29 @@ When creating the new RSS source, configure it with the following parameters. He
      - **REFRESH_INTERVAL**  Set the refresh interval in seconds for the frequency of updates.
      - **DIGEST_SPLITTING** is set to `"false"` since we’re not splitting entries into multiple items.
 
+### Configuration for Darkweb Feeds
+
+Extend your compose.yml with a tor service, e.g.
+
+```yaml
+tor:
+  image: "docker.io/dperson/torproxy:latest"
+  deploy:
+    restart_policy:
+      condition: always
+  environment:
+    # LOCATION: "AT"
+  logging:
+    driver: "json-file"
+    options:
+      max-size: "200k"
+      max-file: "10"
+```
+
+Read details about the used docker image [here](https://github.com/dperson/torproxy)
+
+The important setting is "PROXY_SERVER" in the OSINT Source you want to crawl.
+
 ## RT Collector
 RT Collector enables Taranis AI to collect data from a user-defined [Request Tracker](https://bestpractical.com/request-tracker) instance.
 
