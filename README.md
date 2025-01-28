@@ -5,8 +5,8 @@ This repository contains the website 'taranis.ai' which is the documentation for
 
 ## Develop
 
-[!NOTE]  
-This repository uses git-lfs
+> [!NOTE]  
+> This repository uses git-lfs
 
 ### Requirements
 
