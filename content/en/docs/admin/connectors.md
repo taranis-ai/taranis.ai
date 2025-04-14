@@ -10,6 +10,8 @@ Supported options:
 ## MISP Connector
 *The MISP connector is currently in an experimental stage. Please submit issues when you discover any problems or need support with its usage.*
 
+> Until the [definitions of our MISP Objects](https://github.com/taranis-ai/taranis-ai/tree/master/src/worker/worker/connectors/definitions/objects) are not officially part of the MISP platform, feel free to import them manually (see [MISP Objects](https://www.misp-project.org/2021/03/17/MISP-Objects-101.html/)). This enables you to edit the objects of News Items and Story data directly in you MISP instances without Taranis AI.
+
 MISP Connector enables Taranis AI to push Stories to [MISP](https://www.misp-project.org/) in the representation of MISP Events.
 
 The created events contain automatically an [Event Report](https://www.circl.lu/doc/misp/create-event-report/) based on the Story content (currently it encompasses the Story description and Story summary, if you feel the Event Report would benefit extending with more information, please open a feature request for it [here](https://github.com/taranis-ai/taranis-ai/issues)).

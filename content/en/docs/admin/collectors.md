@@ -119,6 +119,8 @@ RT Collector enables Taranis AI to collect data from a user-defined [Request Tra
   * TLP_LEVEL
 
 ## MISP Collector
+> Until the [definitions of our MISP Objects](https://github.com/taranis-ai/taranis-ai/tree/master/src/worker/worker/connectors/definitions/objects) are not officially part of the MISP platform, feel free to import them manually (see [MISP Objects](https://www.misp-project.org/2021/03/17/MISP-Objects-101.html/)). This enables you to edit the objects of News Items and Story data directly in you MISP instances without Taranis AI.
+
 MISP Collector enables Taranis AI to collect [MISP](https://www.misp-project.org/) events.
 
 * Required fields:
