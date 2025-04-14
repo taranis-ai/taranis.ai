@@ -140,11 +140,9 @@ Essentially it works exactly like other connectors with one exception: conflicts
 ### Conflict resolution
 Conflicts can currently be resolved in the Connectors section accessible using the General dashboard and the dashboard in the Administration section.
 
-![Conflict Resolution Admin View](../../../../static/docs/admin_connectors.png)
-
 In the Conflict Resolution View it is possible to resolve given conflicts. The content on the right hand side editor is the new content and is the content, which is the content that is used for the eventual update. With "Get Right Side" button, it is possible to check what content will be submitted. "Submit Resolution" button is used to submit the update. After a reload, another conflict in the queue will appear, or no conflicts will be shown.
 
-![Story Conflict Resolution View](../../../../static/docs/conflict_resolution_view.png)
+![conflict_resolution_view](/docs/conflict_resolution_view.png)
 
 
 Conflicts are stored in a temporary memory, to encourage a fresh MISP Collector recollection before resolving conflicts and prevent conflict resolution with outdated data.
