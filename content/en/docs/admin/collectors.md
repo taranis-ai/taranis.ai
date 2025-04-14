@@ -8,6 +8,7 @@ weight: 5
 1. [RSS Collector](#rss-collector)
 2. [Simple Web Collector](#simple-web-collector)
 3. [RT Collector](#rt-collector)
+4. [MISP Collector](#misp-collector)
 
 The administration view now allows users to use the Preview feature to see the result of the configuration without the items being processed further for the Assess view.
 This feature is available for RSS, Simple Web and RT collector.
@@ -110,12 +111,47 @@ The important setting is "PROXY_SERVER" in the OSINT Source you want to crawl.
 RT Collector enables Taranis AI to collect data from a user-defined [Request Tracker](https://bestpractical.com/request-tracker) instance.
 
 * Required fields:
-  * **BASE_URL**: Base URL of the RT instance (e.g. `localhost`).
+  * **BASE_URL**: Base URL of the RT instance (e.g. `http://localhost`).
   * **RT_TOKEN**: User token for the RT instance.
 
 * Optional fields:
   * ADDITIONAL_HEADERS
   * TLP_LEVEL
+
+## MISP Collector
+MISP Collector enables Taranis AI to collect [MISP](https://www.misp-project.org/) events.
+
+* Required fields:
+  * URL: Base URL to the MISP instance (e.g. `https://localhost)
+  * API_KEY: API key to access the instance (see [MISP Automation API](https://www.circl.lu/doc/misp/automation/#automation-api))
+
+* Optional fields:
+  * SSL_CHECK: if enabled, the SSL certificate will be validated
+  * SHARING_GROUP_ID: set to the ID of a sharing group, if you want to collect only one sharing group (see [Create and manage Sharing Groups](https://www.circl.lu/doc/misp/using-the-system/#create-and-manage-sharing-groups))
+  * REQUEST_TIMEOUT
+  * USER_AGENT
+  * PROXY_SERVER
+  * ADDITIONAL_HEADERS
+  * REFRESH_INTERVAL
+
+### How MISP Collector works
+Essentially it works exactly like other connectors with one exception: conflicts. Given the nature of the collaborative environment of MISP events (they can be changed in the MISP platform by the owning organisation and secondary organisations can submit change requests using the [MISP proposals](https://www.circl.lu/doc/misp/using-the-system/#propose-a-change-to-an-event-that-belongs-to-another-organisation)). Due to that, there will likely occur conflicts when attempting to update existing Stories in the instance.
+
+### Conflict resolution
+Conflicts can currently be resolved in the Connectors section accessible using the General dashboard and the dashboard in the Administration section.
+
+![Conflict Resolution Admin View](../../../../static/docs/admin_connectors.png)
+
+In the Conflict Resolution View it is possible to resolve given conflicts. The content on the right hand side editor is the new content and is the content, which is the content that is used for the eventual update. With "Get Right Side" button, it is possible to check what content will be submitted. "Submit Resolution" button is used to submit the update. After a reload, another conflict in the queue will appear, or no conflicts will be shown.
+
+![Story Conflict Resolution View](../../../../static/docs/conflict_resolution_view.png)
+
+
+Conflicts are stored in a temporary memory, to encourage a fresh MISP Collector recollection before resolving conflicts and prevent conflict resolution with outdated data.
+
+
+
+            
 
 ## Digest Splitting
 Digest Splitting is a feature that allows the user to split all available URLs in the located element into individual News Items.
