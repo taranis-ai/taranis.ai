@@ -110,13 +110,19 @@ The important setting is "PROXY_SERVER" in the OSINT Source you want to crawl.
 ## RT Collector
 RT Collector enables Taranis AI to collect data from a user-defined [Request Tracker](https://bestpractical.com/request-tracker) instance.
 
+RT Collector collects tickets, translates all ticket attachments into individual News Items. A ticket is represented via a Story. It also collects ticket Custom Fields and saves it as key-value pairs represented with Story attributes, visible whilst Story editing.
+
 * Required fields:
   * **BASE_URL**: Base URL of the RT instance (e.g. `http://localhost`).
   * **RT_TOKEN**: User token for the RT instance.
 
 * Optional fields:
+  * SEARCH_QUERY: query to use for filtering tickets (e.g. owner='user1'). It is possible to check this manually by: http://<rt_address>/REST/2.0/tickets?query=owner='user1'
+  * FIELDS_TO_INCLUDE: case-sensitive, comma-separated values; example: Email, IP; if not set, all ticket custom fields are ingested
   * ADDITIONAL_HEADERS
   * TLP_LEVEL
+  * USER_AGENT
+  * PROXY_SERVER
 
 ## MISP Collector
 > Until the [definitions of our MISP Objects](https://github.com/taranis-ai/taranis-ai/tree/master/src/worker/worker/connectors/definitions/objects) are not officially part of the MISP platform, feel free to import them manually (see [MISP Objects](https://www.misp-project.org/2021/03/17/MISP-Objects-101.html/)). This enables you to edit the objects of News Items and Story data directly in you MISP instances without Taranis AI.
@@ -124,8 +130,8 @@ RT Collector enables Taranis AI to collect data from a user-defined [Request Tra
 MISP Collector enables Taranis AI to collect [MISP](https://www.misp-project.org/) events.
 
 * Required fields:
-  * URL: Base URL to the MISP instance (e.g. `https://localhost)
-  * API_KEY: API key to access the instance (see [MISP Automation API](https://www.circl.lu/doc/misp/automation/#automation-api))
+  * **URL**: Base URL to the MISP instance (e.g. `https://localhost)
+  * **API_KEY**: API key to access the instance (see [MISP Automation API](https://www.circl.lu/doc/misp/automation/#automation-api))
 
 * Optional fields:
   * SSL_CHECK: if enabled, the SSL certificate will be validated
