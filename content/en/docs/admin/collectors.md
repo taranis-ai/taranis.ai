@@ -110,7 +110,7 @@ The important setting is "PROXY_SERVER" in the OSINT Source you want to crawl.
 ## RT Collector
 RT Collector enables Taranis AI to collect data from a user-defined [Request Tracker](https://bestpractical.com/request-tracker) instance.
 
-RT Collector collects tickets, translates all ticket attachments into individual News Items. A ticket is represented via a Story. It also collects ticket Custom Fields and saves it as key-value pairs represented with Story attributes, visible whilst Story editing.
+RT Collector collects tickets, translates all ticket attachments into individual News Items. A ticket is represented via a Story. It also collects ticket Custom Fields and saves it as key-value pairs represented with Story attributes, visible whilst Story editing. On each collector execution an update to existing Stories occurs, so editing the Story values in Taranis AI is not recommended and handling it more like read-only items is better.
 
 * Required fields:
   * **BASE_URL**: Base URL of the RT instance (e.g. `http://localhost`).
