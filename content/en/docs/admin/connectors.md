@@ -17,7 +17,14 @@ MISP Connector enables Taranis AI to push Stories to [MISP](https://www.misp-pro
 The created events contain automatically an [Event Report](https://www.circl.lu/doc/misp/create-event-report/) based on the Story content (currently it encompasses the Story description and Story summary, if you feel the Event Report would benefit extending with more information, please open a feature request for it [here](https://github.com/taranis-ai/taranis-ai/issues)).
 
 
-The Connector needs to be first setup in the Admin section under the Connectors tab.
+First the user with administrative privileges needs to make sure, the permissions connected to Connectors usage are assigned appropriately, by default, they are not assigned to any user, not even the admins themselves. Then the Connector needs to be setup in the Admin section under the Connectors tab.
+
+Explanation of individual permissions:
+* Connector user access - allows access to share 
+* Config connector access
+* Config connector create
+* Config connector delete
+* Config connector update
 
 ![admin_connectors](/docs/admin_connectors.png)
 

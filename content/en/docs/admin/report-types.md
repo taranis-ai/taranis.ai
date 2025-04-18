@@ -15,7 +15,7 @@ Desired attributes need to be created first. Then they can be managed by the adm
 
 ### Report Types - CRUD 
 * Create: Report types can be created ("New item"). After adding a new attribute group, different attributes can be added to this group.
-* Read & Update: Report types (including their attribute groups) can be updated by clicking on them in the list. 
+* Read & Update: Report types (including their attribute groups) can be updated by clicking on them in the list. Their update will not affect Reports, which already use the Report Type
 * Delete: One or multiple reports can be deleted at once.
 
 ## Screenshots
