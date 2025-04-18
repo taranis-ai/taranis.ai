@@ -1,6 +1,6 @@
 ---
 title: "Connectors"
-description: "Connectors are used to push information out of Taranits (experimental)"
+description: "Connectors are used to push information out of Taranis AI (experimental)"
 weight: 6
 ---
 
@@ -28,7 +28,7 @@ Explanation of individual permissions:
 
 ![admin_connectors](/docs/admin_connectors.png)
 
-* Requuired parameters:
+* Required parameters:
   * URL: Base URL to the MISP instance (e.g. `https://localhost)
   * API_KEY: API key to access the instance (see [MISP Automation API](https://www.circl.lu/doc/misp/automation/#automation-api))
   * ORGANISATION_ID: ID of your organisation, usually starts with ID=1 (*It is very important that this value is correct, otherwise the tool will not work properly!*)
