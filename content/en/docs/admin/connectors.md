@@ -20,11 +20,11 @@ The created events contain automatically an [Event Report](https://www.circl.lu/
 First the user with administrative privileges needs to make sure, the permissions connected to Connectors usage are assigned appropriately, by default, they are not assigned to any user, not even the admins themselves. Then the Connector needs to be setup in the Admin section under the Connectors tab.
 
 Explanation of individual permissions:
-* Connector user access - allows access to share 
-* Config connector access
-* Config connector create
-* Config connector delete
-* Config connector update
+* Connector user access - ability to share a story to a Connector
+* Config connector access - ability to access admin Connector configuration
+* Config connector create - ability to create a Connector
+* Config connector delete - ability to delete a Connector
+* Config connector update - ability to update a Connector configuration
 
 ![admin_connectors](/docs/admin_connectors.png)
 
@@ -46,7 +46,9 @@ Explanation of individual permissions:
   ### Usage of the MISP Connector
   To send a story to MISP, use the button "Share to Connector" in Story options in Assess. When an update to the Story is later on made, it is recommended to share the change immediately, you need to do this manually like the first time.
 
+  > Before a Story is pushed repeatedly to update the MISP event, it is important to check if any proposals are pending in the MISP event, as it would override the original content of it and would make it difficult to resolve the proposals correctly.
+
   ![assess_share_to_connector](/docs/assess_share_to_connector.png)
 
 
-  When you digest a Story, that is not owned by your organisation, it is possible to update it in Taranis AI and by using the same "Share to Connector" button in the Story options a proposal to the event is created. Then the owning organisation should review this proposal, and approve or reject the changes.
+  When a Story is collected, that is not owned by your configured organisation, it is possible to update it in Taranis AI and by using the same "Share to Connector" button in the Story options a proposal to the event is created. Then the owning organisation should review this proposal, and approve or reject the changes.
