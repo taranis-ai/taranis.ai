@@ -8,6 +8,7 @@ weight: 5
 1. [RSS Collector](#rss-collector)
 2. [Simple Web Collector](#simple-web-collector)
 3. [RT Collector](#rt-collector)
+4. [MISP Collector](#misp-collector)
 
 The administration view now allows users to use the Preview feature to see the result of the configuration without the items being processed further for the Assess view.
 This feature is available for RSS, Simple Web and RT collector.
@@ -109,13 +110,63 @@ The important setting is "PROXY_SERVER" in the OSINT Source you want to crawl.
 ## RT Collector
 RT Collector enables Taranis AI to collect data from a user-defined [Request Tracker](https://bestpractical.com/request-tracker) instance.
 
+RT Collector collects tickets, translates all ticket attachments into individual News Items. A ticket is represented via a Story. It also collects ticket Custom Fields and saves it as key-value pairs represented with Story attributes, visible whilst Story editing. On each collector execution an update to existing Stories occurs, so editing the Story values in Taranis AI is not recommended and handling it more like read-only items is better.
+
 * Required fields:
-  * **BASE_URL**: Base URL of the RT instance (e.g. `localhost`).
+  * **BASE_URL**: Base URL of the RT instance (e.g. `http://localhost`).
   * **RT_TOKEN**: User token for the RT instance.
 
 * Optional fields:
+  * SEARCH_QUERY: query to use for filtering tickets (e.g. owner='user1'). It is possible to check this manually by: http://<rt_address>/REST/2.0/tickets?query=owner='user1'
+  * FIELDS_TO_INCLUDE: case-sensitive, comma-separated values; example: Email, IP; if not set, all ticket custom fields are ingested
   * ADDITIONAL_HEADERS
   * TLP_LEVEL
+  * USER_AGENT
+  * PROXY_SERVER
+
+## MISP Collector
+> Until the [definitions of our MISP Objects](https://github.com/taranis-ai/taranis-ai/tree/master/src/worker/worker/connectors/definitions/objects) are not officially part of the MISP platform, feel free to import them manually (see [MISP Objects](https://www.misp-project.org/2021/03/17/MISP-Objects-101.html/)). This allows to edit the information of News Items and Story data directly in the MISP instance without Taranis AI.
+
+MISP Collector enables Taranis AI to collect [MISP](https://www.misp-project.org/) events.
+
+* Required fields:
+  * **URL**: Base URL to the MISP instance (e.g. `https://localhost)
+  * **API_KEY**: API key to access the instance (see [MISP Automation API](https://www.circl.lu/doc/misp/automation/#automation-api))
+
+* Optional fields:
+  * SSL_CHECK: if enabled, the SSL certificate will be validated
+  * SHARING_GROUP_ID: set to the ID of a sharing group, if only one sharing group should be collected (see [Create and manage Sharing Groups](https://www.circl.lu/doc/misp/using-the-system/#create-and-manage-sharing-groups)).
+  * REQUEST_TIMEOUT
+  * USER_AGENT
+  * PROXY_SERVER
+  * ADDITIONAL_HEADERS
+  * REFRESH_INTERVAL
+
+### How MISP Collector works
+Essentially it works exactly like other collectors with one exception: conflicts. Given the nature of the collaborative environment of MISP events (they can be changed in the MISP platform by the owning organisation and secondary organisations can submit change requests using the [MISP proposals](https://www.circl.lu/doc/misp/using-the-system/#propose-a-change-to-an-event-that-belongs-to-another-organisation)). Due to that, there will likely occur conflicts when attempting to update existing Stories that were, in the meantime, internally modified. 
+
+Generally, conflicts occur the moment, a Story is modified internally, and has not been pushed to MISP immediately. Therefore, it is recommended to always try to keep Stories in sync with the MISP events. To update them in MISP with the Story (see [Connectors](/docs/admin/connectors)).
+
+### Conflict resolution
+Conflicts can currently be resolved in the Connectors section accessible in the general and administration dashboard.
+
+In the Conflict Resolution View it is possible to resolve given conflicts.
+
+![conflict_resolution_view](/docs/conflict_resolution_view.png)
+
+In the view, all stories that have conflicts will be shown in expandable cards. One by one it is possible to inspect them and resolve them.
+
+At the top, the number of events (among the ones in conflict) have proposals to resolve is shown (only owned by your MISP organisation). It is recommended to resolve them first in MISP, before you resolve them in Taranis AI, so you work with the latest information. Once teh conflicts are resolved and changes are submitted, the Story will be updated without raising conflicts later on (until the Story gets modified internally). It is the users' decision, whether they want to resolve the conflicts immediately with the version collected without proposals, or are skipped, preposals in MISP are resolved, and resolve conflicts later on next collection. In case a Story has proposals, it is possible to open the event in MISP with the "View Proposal" button.
+
+ The content on the left is the current Story. The content on the right hand side editor is the new content and is the content, which is the content that is used for the eventual update. It is possible to take the right or left side of each difference shown using the diff window by clicking the arrows on the left sides of each content window.
+
+ Both sides are freely editable and keyboard shortcuts for back and forward are supported. The context for keyboard shortcuts is decided based on where the cursor is (where it was clicked the last time - right or left side).
+
+ > It is important, that the content on the right side stays a valid Story JSON.
+ 
+ With "Get Right Side" button, it is possible to check what content will be submitted. "Submit Resolution" button is used to submit the update.
+
+Conflicts are stored in a temporary memory, to encourage a fresh MISP Collector recollection, before resolving conflicts and to prevent conflict resolution with outdated data.
 
 ## Digest Splitting
 Digest Splitting is a feature that allows the user to split all available URLs in the located element into individual News Items.
