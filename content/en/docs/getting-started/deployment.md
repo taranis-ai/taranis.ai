@@ -22,9 +22,20 @@ cp env.sample .env
 
 Open file `.env` and change defaults if needed. More details about environment variables can be found [here](https://github.com/taranis-ai/taranis-ai/blob/master/docker/README.md).
 
+Taranis AI images are tagged as follows:
+- Official release version number (e.g. `1.1.7`)
+- Every official image release comes with an extra stable tag, in case pinning the release is not favourable (`stable`)
+- Latest tag for tracking the latest uploaded image, there is no guarantee this is an officially released image (`latest`)
+
 See [Advanced monitoring](./advanced-monitoring.md) for more logging insights.
 
 ## Startup & Usage
+
+TO circumvent the potential reusage of older local images
+
+```bash
+docker compose pull
+```
 
 Start-up application
 
