@@ -21,8 +21,8 @@ RSS Collector enables Taranis AI to collect data from a user-defined RSS feed (S
   * USER_AGENT
   * PROXY_SERVER
   * ADDITIONAL_HEADERS [accepts a valid `json`] (can be used to add additional headers, not all headers work as expected)
-  * CONTENT_LOCATION
-  * XPATH
+  * CONTENT_LOCATION (use `key` of the feed schema, from where the content for news items should be extracted (e.g. `description` of the feed entry); if the `key` for a feed entry is not found, it falls back to behaviour, as if the key was not entered at all)
+  * XPATH (set this to specify the location of scraped element on the website, where the RSS feed entry points to; this is not an XPATH inside the RSS Feed)
   * TLP_LEVEL
   * REFRESH_INTERVAL (see [Bots - refresh_interval](/docs/admin/bots/#bot's-settings))
   * DIGEST_SPLITTING On/Off (creates News Items out of URLs present in the `Summary` field of RSS feed)
@@ -53,7 +53,7 @@ Simple Web Collector enables Taranis AI to collect data using web URLs and XPath
   * USER_AGENT
   * PROXY_SERVER
   * ADDITIONAL_HEADERS
-  * XPATH
+  * XPATH (set to specify the location of the scraped element on the website)
   * TLP_LEVEL
   * DIGEST_SPLITTING On/Off
   * DIGEST_SPLITTING_LIMIT (default: 30)
