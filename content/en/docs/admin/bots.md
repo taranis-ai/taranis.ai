@@ -17,10 +17,6 @@ weight: 5
 - Type: Select an option based on the desired functionalities.
 - Index: Specifies the execution order of bots when RUN_AFTER_COLLECTOR is enabled.
 - RUN_AFTER_COLLECTOR: Executes the bot after any collector.
-- REFRESH_INTERVAL: Specifies the execution interval of the bot (default is 10 minutes).
-    - Accepted values:
-        - hourly
-        - daily 
-        - weekly
-        - number representing minutes (20 (run every 20 minutes))
-        - a certain time (15:44) - run every day at set time (24h time format)
+- REFRESH_INTERVAL: Specifies the execution interval of the bot (default is every 8 hours - `0 */8 * * *`).
+    - Accepted values: Crontab-like style.
+        - Helper buttons: daily, weekly, monthly.

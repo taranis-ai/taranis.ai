@@ -20,6 +20,7 @@ RSS Collector enables Taranis AI to collect data from a user-defined RSS feed (S
 * Optional fields:
   * USER_AGENT
   * PROXY_SERVER
+  * USE_GLOBAL_PROXY (ignore anything set in the `PROXY_SERVER` field, use what is currently set as a default in [Settings](/docs/admin/settings); learn more in section [Settings](/docs/admin/settings/#default-collector-proxy))
   * ADDITIONAL_HEADERS [accepts a valid `json`] (can be used to add additional headers, not all headers work as expected)
   * CONTENT_LOCATION (use `key` of the feed schema, from where the content for news items should be extracted (e.g. `description` of the feed entry); if the `key` for a feed entry is not found, it falls back to behaviour, as if the key was not entered at all)
   * XPATH (set this to specify the location of scraped element on the website, where the RSS feed entry points to; this is not an XPATH inside the RSS Feed)
@@ -52,6 +53,7 @@ Simple Web Collector enables Taranis AI to collect data using web URLs and XPath
 * Optional fields:
   * USER_AGENT
   * PROXY_SERVER
+  * USE_GLOBAL_PROXY
   * ADDITIONAL_HEADERS
   * XPATH (set to specify the location of the scraped element on the website)
   * TLP_LEVEL
@@ -81,7 +83,7 @@ To set up an RSS Collector for collecting posts from a Mastodon hashtag or user,
 When creating the new RSS source, configure it with the following parameters. Here’s an example of how to fill out the fields:
      - **FEED_URL**: Enter the RSS feed URL for the Mastodon hashtag or user (e.g., `https://mastodon.social/tags/cybersecurity.rss`).
      - **CONTENT_LOCATION**  Set this to `"summary"` to specify the main content location within each RSS entry.
-     - **REFRESH_INTERVAL**  Set the refresh interval in seconds for the frequency of updates.
+     - **REFRESH_INTERVAL**  Set the refresh interval in crontab-like style, see [Bots - refresh_interval](/docs/admin/bots/#bot's-settings).
      - **DIGEST_SPLITTING** is set to `"false"` since we’re not splitting entries into multiple items.
 
 ### Configuration for Darkweb Feeds
@@ -123,6 +125,7 @@ RT Collector collects tickets, translates all ticket attachments into individual
   * TLP_LEVEL
   * USER_AGENT
   * PROXY_SERVER
+  * USE_GLOBAL_PROXY
 
 ## MISP Collector
 > Until the [definitions of our MISP Objects](https://github.com/taranis-ai/taranis-ai/tree/master/src/worker/worker/connectors/definitions/objects) are not officially part of the MISP platform, feel free to import them manually (see [MISP Objects](https://www.misp-project.org/2021/03/17/MISP-Objects-101.html/)). This allows to edit the information of News Items and Story data directly in the MISP instance without Taranis AI.
@@ -139,6 +142,7 @@ MISP Collector enables Taranis AI to collect [MISP](https://www.misp-project.org
   * REQUEST_TIMEOUT
   * USER_AGENT
   * PROXY_SERVER
+  * USE_GLOBAL_PROXY
   * ADDITIONAL_HEADERS
   * REFRESH_INTERVAL
 
