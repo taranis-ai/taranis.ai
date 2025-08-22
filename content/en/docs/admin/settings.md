@@ -45,8 +45,8 @@ When a default [collector](docs/admin/collectors) proxy is set, it can then be u
 This value is used for `REFRESH_INTERVAL` for all collectors (OSINT Sources) when this field is left unset individually for all collectors. The syntax is the same as `REFRESH_INTERVAL` in [bot's settings](/docs/admin/bots/#bots-settings).
 
 ## Export options
-- **Export all Stories**: Export all stories without any metadata (tags, attributes, etc.).
-- **Export all Stories with metadata**: Export all stories with all the metadata (tags, attributes, likes, dislikes, relevance, etc.).
+- **Export all Stories**: Export all stories without any metadata (tags, etc.).
+- **Export all Stories with metadata**: Export all stories with all the metadata (tags, attributes, likes, dislikes, relevance, etc.). It is not safe to use these data back for importing (some tags and attributes are used for internal purposes and could create unexpected behaviour). Drop metadata before importing, if doing so.
 
 ## Danger Zone
 - **Clear all Worker Queues**: Delete all messages from all worker queues. This action cannot be undone.
