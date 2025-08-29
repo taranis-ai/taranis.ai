@@ -34,3 +34,33 @@ docker compose config > resolved-compose.yml
 # convert compose file to kubernetes 
 kompose --file resolved-compose.yaml convert
 ```
+
+
+## MultiDB SQLAlchemy
+
+
+If you want to connect to a kubernetes cluster you can do something like this:
+
+```bash
+kubectl create ns db
+helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo update
+
+helm install pg-ha bitnami/postgresql-ha -n db \
+  --set postgresql.username=app \
+  --set postgresql.password=apppass \
+  --set postgresql.database=appdb \
+  --set pgpool.adminUsername=pgpool \
+  --set pgpool.adminPassword=pgpoolpass \
+  --set postgresql.replicaCount=2
+
+kubectl -n db port-forward statefulset/pg-ha-postgresql 54321:5432 &
+kubectl -n db port-forward pod/pg-ha-postgresql-1 54322:5432 &
+```
+
+And then connect with:
+
+```
+SQLALCHEMY_DATABASE_URI="postgresql+psycopg://app:apppass@/appdb?host=127.0.0.1,127.0.0.1&port=54321,54322&target_session_attrs=read-write&connect_timeout=3"
+```
+
