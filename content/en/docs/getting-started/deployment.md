@@ -23,6 +23,7 @@ cp env.sample .env
 Open file `.env` and change defaults if needed. More details about environment variables can be found [here](https://github.com/taranis-ai/taranis-ai/blob/master/docker/README.md).
 
 Taranis AI images are tagged as follows:
+
 - Official release version number (e.g. `1.1.7`)
 - Every official image release comes with an extra stable tag, in case pinning the release is not favourable (`stable`)
 - Latest tag for tracking the latest uploaded image, there is no guarantee this is an officially released image (`latest`)
@@ -56,7 +57,7 @@ http://<url>:<TARANIS_PORT>/login
 The passwords for these two default users can be overridden by setting the environment variables `PRE_SEED_PASSWORD_ADMIN` or `PRE_SEED_PASSWORD_USER` before first launch.
 Afterwards they are stored in the database in the `user` table.
 
-Open `http://<url>:<TARANIS_PORT>/config/sources` and click **load default sources** to import the default sources from: [default_sources.json](https://github.com/taranis-ai/taranis-ai/blob/master/src/gui/public/default_sources.json)
+Open `http://<url>:<TARANIS_PORT>/config/sources` and click **load default sources** to import the default sources from: [default_sources.json](https://github.com/taranis-ai/taranis-ai/blob/master/src/core/core/static/default_sources.json)
 
 Or import a source export via the **Import**.
 

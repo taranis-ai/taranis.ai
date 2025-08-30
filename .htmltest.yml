@@ -1,0 +1,4 @@
+DirectoryPath: "public"
+IgnoreDirs:
+  - "_print"
+  - "**/_print/**"

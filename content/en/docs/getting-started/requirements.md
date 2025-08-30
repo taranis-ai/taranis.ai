@@ -9,7 +9,6 @@ For the best experience, we recommend the following minimal requirements for Tar
 - Resolution: FullHD or more
 
 - Browser:
-    * Chromium
-    * Mozilla Firefox
-    * Microsoft Edge
-
+  - Chromium
+  - Mozilla Firefox
+  - Microsoft Edge

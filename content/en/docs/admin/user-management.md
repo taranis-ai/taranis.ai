@@ -6,15 +6,19 @@ weight: 1
 
 
 ### Organizations
+
 Organizations can be added with following parameters defining them: name, description, address.
 
 ### Roles
+
 Define roles with certain permissions.
 
-### Users 
+### Users
+
 Manage users and assign them a role, permissions and an organization.
 
 ## Screenshots
+
 Add new Organization
 
 ![user_new_org](/docs/organization_add.png)
