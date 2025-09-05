@@ -28,6 +28,8 @@ Taranis AI images are tagged as follows:
 - Every official image release comes with an extra stable tag, in case pinning the release is not favourable (`stable`)
 - Latest tag for tracking the latest uploaded image, there is no guarantee this is an officially released image (`latest`)
 
+For detailed information about container tags, release strategy, and deployment recommendations, see [Releases and Container Tags](./releases-and-tags.md).
+
 See [Advanced monitoring](./advanced-monitoring.md) for more logging insights.
 
 ## Startup & Usage
