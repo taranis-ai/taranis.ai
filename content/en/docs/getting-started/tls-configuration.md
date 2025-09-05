@@ -61,7 +61,7 @@ Make sure, all variables are properly set in the [compose file](https://github.c
 
 1. **Certificate Mounting**: Certificates mounted as read-only (`./certs:/certs:ro`)
 2. **SSL Verification**: Self-signed certificates cause problems (`SSL_VERIFICATION=False`)
-3. **Health Checks**: To work properly they need to be changed to `https://` prefix. Moreover, the Certificate Authority needs to be added into the container's trust store by mounting it under /usr/local/share/... Read more at [docker.com](https://docs.docker.com/engine/network/ca-certs/)
+3. **Health Checks**: To work properly they need to be changed to `https://` prefix. Moreover, the Certificate Authority needs to be added into the container's trust store by mounting it under /usr/local/share/... Read more at [docker.com](https://docs.docker.com/engine/network/ca-certs/).
 
 ### Basic TLS Setup
 
