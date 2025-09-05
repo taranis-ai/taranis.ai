@@ -29,6 +29,9 @@ Taranis AI images are tagged as follows:
 - Latest tag for tracking the latest uploaded image, there is no guarantee this is an officially released image (`latest`)
 
 See [Internal TLS Configuration](./tls-configuration.md) for setting up TLS encryption and [Advanced monitoring](./advanced-monitoring.md) for more logging insights.
+For detailed information about container tags, release strategy, and deployment recommendations, see [Releases and Container Tags](./releases-and-tags.md).
+
+See [Advanced monitoring](./advanced-monitoring.md) for more logging insights.
 
 ## Startup & Usage
 
