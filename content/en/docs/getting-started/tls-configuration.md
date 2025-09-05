@@ -6,8 +6,6 @@ description: >
   Configure TLS encryption for Taranis AI using Granian ASGI server with SSL certificates and proper environment variables.
 ---
 
-# TLS Configuration
-
 This guide explains how to configure TLS (Transport Layer Security) for Taranis AI using the Granian ASGI server. TLS provides encrypted communication between clients and the server, essential for secure deployments.
 
 ## Key Environment Variables
