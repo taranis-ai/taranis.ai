@@ -45,7 +45,7 @@ fi
 
 # --- Flags / env ---
 AUTO_YES=0           # 0 ask, 1 yes, 2 no
-AUTO_START=""        # "", "yes", "no"
+AUTO_START=""
 ADMIN_PW_ENV="${ADMIN_PW:-}"  # optional env override
 
 while (($#)); do
@@ -83,7 +83,6 @@ CURL_OPTS=( -fsSL --retry 3 --retry-delay 2 --retry-connrefused )
 CURL_AUTH=()
 [[ -n "${GITHUB_TOKEN:-}" ]] && CURL_AUTH=( -H "Authorization: Bearer ${GITHUB_TOKEN}" )
 
-# --- Fetch latest release (exact filenames) ---
 info "Fetching latest release metadata for ${REPO}…"
 TMP_JSON="$(mktemp "${TMPDIR%/}/taranis-release.XXXXXX")"
 curl "${CURL_OPTS[@]}" "${CURL_AUTH[@]}" -H "Accept: application/vnd.github+json" "$API" >"$TMP_JSON"
@@ -102,7 +101,6 @@ curl "${CURL_OPTS[@]}" "$COMPOSE_URL" -o "$COMPOSE_OUT"
 info "Downloading env.sample -> ./${ENV_SAMPLE_OUT}"
 curl "${CURL_OPTS[@]}" "$ENV_SAMPLE_URL" -o "$ENV_SAMPLE_OUT"
 
-# --- Prompt helpers (read from /dev/tty) ---
 ask_yes_no() {
   # $1 prompt, $2 default ("yes"|"no")
   local prompt="$1" def="$2" ans
