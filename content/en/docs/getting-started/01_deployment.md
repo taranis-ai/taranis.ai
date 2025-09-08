@@ -7,7 +7,7 @@ weight: 1
 Install from [`stable` release](https://github.com/taranis-ai/taranis-ai/releases/latest)
 
 ```bash
-curl -fsSL https://get.taranis.ai | sh
+curl -fsSL https://taranis.ai/install.sh | bash
 ```
 
 Clone via git
