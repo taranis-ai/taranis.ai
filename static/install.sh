@@ -109,7 +109,7 @@ ask_yes_no() {
   case "$AUTO_YES" in
     1) printf 'yes\n'; return 0 ;;
     2) printf 'no\n';  return 0 ;;
-  endesac 2>/dev/null || true  # in case someone runs in dash accidentally
+  esac
 
   if [[ "$def" == "yes" ]]; then
     printf '%s' "$prompt [Y/n] " > /dev/stderr
@@ -117,9 +117,8 @@ ask_yes_no() {
     printf '%s' "$prompt [y/N] " > /dev/stderr
   fi
 
-  # Read from the terminal, not STDIN (which is the pipe)
   if ! IFS= read -r ans <"$PROMPT_TTY"; then
-    ans=""  # treat read failure as empty -> pick default
+    ans=""
   fi
 
   ans="${ans,,}"
