@@ -36,6 +36,13 @@ cleanup() {
 }
 trap cleanup EXIT INT TERM HUP
 
+# Ensure we can read from the user even if STDIN is a pipe
+PROMPT_TTY="/dev/tty"
+if [[ ! -r "$PROMPT_TTY" ]]; then
+  # If /dev/tty is not available (very rare), fall back to STDIN/STDERR
+  PROMPT_TTY="/dev/stdin"
+fi
+
 # --- Flags / env ---
 AUTO_YES=0           # 0 ask, 1 yes, 2 no
 AUTO_START=""        # "", "yes", "no"
@@ -76,12 +83,11 @@ CURL_OPTS=( -fsSL --retry 3 --retry-delay 2 --retry-connrefused )
 CURL_AUTH=()
 [[ -n "${GITHUB_TOKEN:-}" ]] && CURL_AUTH=( -H "Authorization: Bearer ${GITHUB_TOKEN}" )
 
-# --- Fetch latest release (simplified exact filenames) ---
+# --- Fetch latest release (exact filenames) ---
 info "Fetching latest release metadata for ${REPO}…"
 TMP_JSON="$(mktemp "${TMPDIR%/}/taranis-release.XXXXXX")"
 curl "${CURL_OPTS[@]}" "${CURL_AUTH[@]}" -H "Accept: application/vnd.github+json" "$API" >"$TMP_JSON"
 
-# Directly grep the JSON for exact asset names (no jq dependency)
 COMPOSE_URL="$(grep -Eo 'https://[^"]+/compose\.yml' "$TMP_JSON" | head -n1 || true)"
 ENV_SAMPLE_URL="$(grep -Eo 'https://[^"]+/env\.sample' "$TMP_JSON" | head -n1 || true)"
 
@@ -96,25 +102,48 @@ curl "${CURL_OPTS[@]}" "$COMPOSE_URL" -o "$COMPOSE_OUT"
 info "Downloading env.sample -> ./${ENV_SAMPLE_OUT}"
 curl "${CURL_OPTS[@]}" "$ENV_SAMPLE_URL" -o "$ENV_SAMPLE_OUT"
 
-# --- Prompts ---
+# --- Prompt helpers (read from /dev/tty) ---
 ask_yes_no() {
   # $1 prompt, $2 default ("yes"|"no")
   local prompt="$1" def="$2" ans
   case "$AUTO_YES" in
     1) printf 'yes\n'; return 0 ;;
     2) printf 'no\n';  return 0 ;;
-  esac
+  endesac 2>/dev/null || true  # in case someone runs in dash accidentally
+
   if [[ "$def" == "yes" ]]; then
-    read -r -p "$(printf '%s' "$prompt [Y/n] ")" ans || true
+    printf '%s' "$prompt [Y/n] " > /dev/stderr
   else
-    read -r -p "$(printf '%s' "$prompt [y/N] ")" ans || true
+    printf '%s' "$prompt [y/N] " > /dev/stderr
   fi
+
+  # Read from the terminal, not STDIN (which is the pipe)
+  if ! IFS= read -r ans <"$PROMPT_TTY"; then
+    ans=""  # treat read failure as empty -> pick default
+  fi
+
   ans="${ans,,}"
   case "$ans" in
     y|yes) printf 'yes\n' ;;
     n|no)  printf 'no\n' ;;
     *)     printf '%s\n' "$def" ;;
   esac
+}
+
+read_secret_with_default() {
+  # $1 prompt, $2 default
+  local prompt="$1" def="$2" pw
+  printf '%s' "$prompt" > /dev/stderr
+  # turn off echo only if we are on a TTY
+  if [[ -t 0 || -r "$PROMPT_TTY" ]]; then
+    stty -echo <"$PROMPT_TTY" 2>/dev/null || true
+    if ! IFS= read -r pw <"$PROMPT_TTY"; then pw=""; fi
+    stty echo <"$PROMPT_TTY" 2>/dev/null || true
+    printf '\n' > /dev/stderr
+  else
+    if ! IFS= read -r pw; then pw=""; fi
+  fi
+  [[ -n "$pw" ]] && printf '%s\n' "$pw" || printf '%s\n' "$def"
 }
 
 SETUP="$(ask_yes_no "Setup Taranis AI now?" "yes")"
@@ -158,19 +187,10 @@ else
 fi
 
 # --- Admin password (env or hidden prompt; default 'admin' on Enter) ---
-get_admin_pw() {
-  if [[ -n "$ADMIN_PW_ENV" ]]; then
-    note "Using admin password from ADMIN_PW env."
-    printf '%s\n' "$ADMIN_PW_ENV"
-    return 0
-  fi
-  local pw
-  read -r -s -p "Enter admin password for PRE_SEED_PASSWORD_ADMIN (default: admin): " pw || true
-  printf '\n'
-  [[ -n "$pw" ]] && printf '%s\n' "$pw" || printf 'admin\n'
-}
-
-ADMIN_PW_VAL="$(get_admin_pw)"
+ADMIN_PW_VAL="${ADMIN_PW_ENV}"
+if [[ -z "$ADMIN_PW_VAL" ]]; then
+  ADMIN_PW_VAL="$(read_secret_with_default 'Enter admin password for PRE_SEED_PASSWORD_ADMIN (default: admin): ' 'admin')"
+fi
 if [[ "$ADMIN_PW_VAL" == "admin" ]]; then
   warn "Using default admin password 'admin' (you can change it later in ${ENV_OUT})."
 fi
@@ -221,7 +241,6 @@ else
   printf '  %s\n' "docker-compose -f ${COMPOSE_OUT} up -d"
 fi
 
-# --- Summary ---
 printf '\n'
 info "${BOLD}All done.${NC}"
 note "Files: ${BOLD}${COMPOSE_OUT}${NC}, ${BOLD}${ENV_SAMPLE_OUT}${NC}, ${BOLD}${ENV_OUT}${NC}"
