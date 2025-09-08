@@ -1,7 +1,7 @@
 ---
 title: "TLS Configuration"
 linkTitle: "TLS Configuration"
-weight: 6
+weight: 20
 description: >
   Configure TLS encryption for Taranis AI using Granian ASGI server with SSL certificates and proper environment variables.
 ---
@@ -11,6 +11,7 @@ This guide explains how to configure TLS (Transport Layer Security) for Taranis 
 ## Key Environment Variables
 
 The primary TLS configuration is handled through Granian environment variables:
+
 ### Required TLS Variables
 
 For a basic TLS setup, configure these environment variables:
@@ -36,6 +37,7 @@ TARANIS_CORE_URL=https://your-domain.com/api
 ```
 
 This variable affects multiple components:
+
 - **Frontend service**: Uses `TARANIS_CORE_URL` to communicate with the core API
 - **Worker service**: Uses `TARANIS_CORE_URL` for API communication (falls back to `http://{TARANIS_CORE_HOST}{TARANIS_BASE_PATH}api` if not set)
 - **GUI service**: Configured via `TARANIS_CORE_API` in config.json
@@ -45,6 +47,7 @@ This variable affects multiple components:
 More [Granian environmental variables](https://github.com/emmett-framework/granian?tab=readme-ov-file#options) that affect SSL are derived from the CLI options prefixed with `--ssl-*`.
 
 Examples:
+
 ```bash
 GRANIAN_SSL_KEYFILE_PASSWORD
 GRANIAN_SSL_CA
@@ -55,6 +58,7 @@ GRANIAN_SSL_CLIENT_VERIFY
 Make sure, all variables are properly set in the [compose file](https://github.com/taranis-ai/taranis-ai/blob/master/docker/compose.yml). The variable `SSL_VERIFICATION` can be set for the `frontend` and `worker` service.
 
 ## Docker Compose Configuration
+
 ### Important Configuration Notes
 
 1. **Certificate Mounting**: Certificates mounted as read-only (`./certs:/certs:ro`)
@@ -111,7 +115,6 @@ networks:
   taranis_network:
     driver: bridge
 ```
-
 
 ## Kubernetes Configuration
 
@@ -173,4 +176,3 @@ spec:
         secret:
           secretName: taranis-tls
 ```
-

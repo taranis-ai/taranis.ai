@@ -4,6 +4,11 @@ description: How to deploy Taranis AI
 weight: 1
 ---
 
+Install from [`stable` release](https://github.com/taranis-ai/taranis-ai/releases/latest)
+
+```bash
+curl -fsSL https://get.taranis.ai | sh
+```
 
 Clone via git
 
@@ -20,7 +25,7 @@ Copy `env.sample` to `.env`
 cp env.sample .env
 ```
 
-Open file `.env` and change defaults if needed. More details about environment variables can be found [here](https://github.com/taranis-ai/taranis-ai/blob/master/docker/README.md).
+Open file `.env` and change defaults if needed. More details about environment variables can be found in the [README.md](https://github.com/taranis-ai/taranis-ai/blob/master/docker/README.md).
 
 Taranis AI images are tagged as follows:
 
