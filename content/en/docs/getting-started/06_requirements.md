@@ -1,7 +1,7 @@
 ---
 title: Recommended setup
 description: Minimal recommended setup for Taranis AI
-weight: 15
+weight: 6
 ---
 
 For the best experience, we recommend the following minimal requirements for Taranis AI:

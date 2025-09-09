@@ -1,7 +1,7 @@
 ---
 title: "Releases and Container Tags"
 linkTitle: "Releases and Tags"
-weight: 7
+weight: 5
 description: >
   Understanding Taranis AI release strategy, container image tags, and their meaning for deployment and upgrades.
 ---

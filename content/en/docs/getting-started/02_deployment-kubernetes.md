@@ -1,7 +1,7 @@
 ---
 title: Kubernetes deployment
 description: How to deploy Taranis AI on Kubernetes
-weight: 5
+weight: 2
 ---
 
 ## Configuration
@@ -36,9 +36,7 @@ docker compose config > resolved-compose.yml
 kompose --file resolved-compose.yaml convert
 ```
 
-
 ## MultiDB SQLAlchemy
-
 
 If you want to connect to a kubernetes cluster you can do something like this:
 
@@ -64,4 +62,3 @@ And then connect with:
 ```
 SQLALCHEMY_DATABASE_URI="postgresql+psycopg://app:apppass@/appdb?host=127.0.0.1,127.0.0.1&port=54321,54322&target_session_attrs=read-write&connect_timeout=3"
 ```
-
