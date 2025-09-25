@@ -21,8 +21,8 @@ cp env.sample .env
 
 Open file `.env` and change defaults if needed. More details about environment variables can be found [here](https://github.com/taranis-ai/taranis-ai/blob/master/docker/README.md).
 
-See [Internal TLS Configuration](./tls-configuration.md) for setting up TLS encryption and [Advanced monitoring](./advanced-monitoring.md) for more logging insights.
-See [Releases and Container Tags](./releases-and-tags.md) for information about container image versions, [Internal TLS Configuration](./tls-configuration.md) for setting up TLS encryption, and [Advanced monitoring](./advanced-monitoring.md) for more logging insights.
+See [Internal TLS Configuration](/docs/getting-started/20_tls-configuration) for setting up TLS encryption and [Advanced monitoring](/docs/getting-started/15_advanced-monitoring) for more logging insights.
+See [Releases and Container Tags](/docs/getting-started/05_releases-and-tags) for information about container image versions, [Internal TLS Configuration](/docs/getting-started/20_tls-configuration) for setting up TLS encryption, and [Advanced monitoring](/docs/getting-started/15_advanced-monitoring) for more logging insights.
 
 ## Convert via Kompose
 
