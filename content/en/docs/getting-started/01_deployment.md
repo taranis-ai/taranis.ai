@@ -33,10 +33,10 @@ Taranis AI images are tagged as follows:
 - Every official image release comes with an extra stable tag, in case pinning the release is not favourable (`stable`)
 - Latest tag for tracking the latest uploaded image, there is no guarantee this is an officially released image (`latest`)
 
-See [Internal TLS Configuration](./tls-configuration.md) for setting up TLS encryption and [Advanced monitoring](./advanced-monitoring.md) for more logging insights.
-For detailed information about container tags, release strategy, and deployment recommendations, see [Releases and Container Tags](./releases-and-tags.md).
+See [Internal TLS Configuration](/docs/getting-started/20_tls-configuration) for setting up TLS encryption and [Advanced monitoring](/docs/getting-started/15_advanced-monitoring) for more logging insights.
+For detailed information about container tags, release strategy, and deployment recommendations, see [Releases and Container Tags](/docs/getting-started/05_releases-and-tags).
 
-See [Advanced monitoring](./advanced-monitoring.md) for more logging insights.
+See [Advanced monitoring](/docs/getting-started/15_advanced-monitoring) for more logging insights.
 
 ## Startup & Usage
 
@@ -58,7 +58,7 @@ Use the application
 http://<url>:<TARANIS_PORT>/login
 ```
 
-## Initial Setup 👤
+## Initial Setup
 
 **The default credentials are `user` / `user` and `admin` / `admin`.**
 

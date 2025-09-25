@@ -22,7 +22,7 @@ Sources for gathering data are set in the **OSINTSources**. It is possible to:
 
 ## Import sources
 
-Select **Import** and choose desired JSON file for import. (See [Initial Setup](/docs/getting-started/deployment/#initial-setup-))
+Select **Import** and choose desired JSON file for import. (See [Initial Setup](/docs/getting-started/01_deployment/#initial-setup))
 
 ## Export sources
 
