@@ -1,0 +1,4 @@
+DirectoryPath: "/tmp/taranis.ai"
+IgnoreDirs:
+  - "_print"
+  - "**/_print/**"
