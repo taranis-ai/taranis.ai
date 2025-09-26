@@ -1,0 +1,29 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-added-large-files
+
+  # Hugo site build and test
+  - repo: local
+    hooks:
+      - id: hugo-build-and-test
+        name: Hugo Build and HTMLTest
+        entry: bash -c
+        args:
+          - |
+            set -e
+            echo "Building Hugo site to temporary directory..."
+            hugo build -d /tmp/taranis.ai
+            echo "Running HTMLTest..."
+            htmltest -c .htmltest.local.yml /tmp/taranis.ai
+            echo "Cleaning up temporary directory..."
+            rm -rf /tmp/taranis.ai
+            echo "Hugo build and test completed successfully!"
+        language: system
+        files: \.(md|html|yml|yaml|toml)$
+        pass_filenames: false
+        verbose: true
