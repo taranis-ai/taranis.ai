@@ -5,8 +5,11 @@ This repository contains the website 'taranis.ai' which is the documentation for
 
 ## Develop
 
-> [!NOTE]  
+> [!NOTE]
 > This repository uses git-lfs
+
+To be able to run local checks prior a commit,
+[htmltest](https://github.com/wjdp/htmltest) and [prek](https://github.com/j178/prek) or [pre-commit](https://github.com/pre-commit/pre-commit) needs to be installed.
 
 ### Requirements
 
@@ -30,4 +33,3 @@ GitHub Actions publish master branch to GitHub Pages
 ### Info
 
 Built with [Docsy](https://github.com/google/docsy)
-
