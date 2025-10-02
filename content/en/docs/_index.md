@@ -10,4 +10,6 @@ weight: 20
 
 {{% pageinfo %}}
 Functionalities marked with 👤 are only accessible by admin users.
+
+To print this documentation visit [/_print/docs](/_print/docs/)
 {{% /pageinfo %}}

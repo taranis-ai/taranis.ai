@@ -43,7 +43,7 @@ section = ["HTML", "print", "RSS"]
 
 [params]
 images = ["screenshot.png"]
-copyright = "<span>© 2024 AIT | <a href='/imprint/'>imprint</a></span>"
+copyright = "<span>© 2025 AIT | <a href='/imprint/'>imprint</a></span>"
 
 version_menu = "Releases"
 archived_version = false
@@ -56,6 +56,9 @@ offlineSearch = true
 
 # Enable syntax highlighting and copy buttons on code blocks with Prism
 prism_syntax_highlighting = false
+
+[params.print]
+disable_toc = true
 
 [params.ui]
 breadcrumb_disable = false
