@@ -22,8 +22,7 @@ repos:
     hooks:
       - id: gh-signoff
         name: Signoff Commit
-        entry: gh signoff
+        entry: echo "Remember to call 'gh signoff' after pushing and creating your PR"
         language: system
-        stages: [post-commit]
         always_run: true
         verbose: true
