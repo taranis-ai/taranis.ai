@@ -11,6 +11,9 @@ This repository contains the website 'taranis.ai' which is the documentation for
 To be able to run local checks prior a commit,
 [htmltest](https://github.com/wjdp/htmltest) and [prek](https://github.com/j178/prek) or [pre-commit](https://github.com/pre-commit/pre-commit) needs to be installed.
 
+Commits need to be sigend off to be able to merge.
+See [basecamp/gh-signoff](https://github.com/basecamp/gh-signoff/blob/main/README.md) for details.
+
 ### Requirements
 
 * [go](https://go.dev/doc/install)
@@ -23,8 +26,6 @@ Start the local server with
 ```bash
 hugo server
 ```
-
-
 
 ## Deploy
 

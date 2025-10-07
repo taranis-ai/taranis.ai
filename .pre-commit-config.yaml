@@ -18,7 +18,11 @@ repos:
         pass_filenames: false
         verbose: true
 
-  - repo: https://github.com/mattlqx/pre-commit-sign
-    rev: v1.2.0
+  - repo: local
     hooks:
-    - id: sign-commit
+      - id: gh-signoff
+        name: Signoff Commit
+        entry: echo "Remember to call 'gh signoff' after pushing and creating your PR"
+        language: system
+        always_run: true
+        verbose: true
