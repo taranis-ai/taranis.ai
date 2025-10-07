@@ -12,15 +12,7 @@ repos:
     hooks:
       - id: hugo-build-and-test
         name: Hugo Build and HTMLTest
-        entry: bash -c
-        args:
-          - |
-            set -e
-            echo "Building Hugo site to temporary directory..."
-            hugo build
-            echo "Running HTMLTest..."
-            htmltest -c .htmltest.yml -s public
-            echo "Hugo build and test completed successfully!"
+        entry: ./htmltest.sh
         language: system
         files: \.(md|html|yml|yaml|toml)$
         pass_filenames: false
