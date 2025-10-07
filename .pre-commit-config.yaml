@@ -17,3 +17,8 @@ repos:
         files: \.(md|html|yml|yaml|toml)$
         pass_filenames: false
         verbose: true
+
+  - repo: https://github.com/mattlqx/pre-commit-sign
+    rev: v1.2.0
+    hooks:
+    - id: sign-commit
