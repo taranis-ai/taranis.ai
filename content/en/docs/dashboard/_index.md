@@ -29,9 +29,9 @@ This example shows that in the Story in MISP was a News Item removed and two oth
 ![conflict_resolution_view](/docs/conflict_resolution_view.png)
 
 ##### News Item Conflicts
-The News Item conflists occur when stories have divergent news items and cannot be automatically updated due to a local change. The user is offered to choose from 2 options of resolution:
+The News Item conflicts occur when stories have divergent news items and cannot be automatically updated due to a local change. The user is offered to choose from 2 options of resolution:
 1. **Keep Local Stories + Add Unique Items** - local Stories stay untouched and News Items that are new are ingested separately.  
-2. **Take Incomming Story (Replace Local)** - local Stories are ungrouped and the incomming Story is ingested as is. 
+2. **Take Incoming Story (Replace Local)** - local Stories are ungrouped and the incoming Story is ingested as is. 
 ![conflict_resolution_view](/docs/conflict_news_item_view.png)
 ---
 Conflicts are stored in a temporary memory, to encourage a fresh MISP Collector recollection, before resolving conflicts and to prevent conflict resolution with outdated data.
