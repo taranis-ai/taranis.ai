@@ -165,28 +165,6 @@ Essentially it works exactly like other collectors with one exception: conflicts
 
 Generally, conflicts occur the moment, a Story is modified internally, and has not been pushed to MISP immediately. Therefore, it is recommended to always try to keep Stories in sync with the MISP events. To update them in MISP with the Story (see [Connectors](/docs/admin/connectors)).
 
-### Conflict resolution
-
-Conflicts can currently be resolved in the Connectors section accessible in the general and administration dashboard.
-
-In the Conflict Resolution View it is possible to resolve given conflicts.
-
-![conflict_resolution_view](/docs/conflict_resolution_view.png)
-
-In the view, all stories that have conflicts will be shown in expandable cards. One by one it is possible to inspect them and resolve them.
-
-At the top, the number of events (among the ones in conflict) have proposals to resolve is shown (only owned by your MISP organisation). It is recommended to resolve them first in MISP, before you resolve them in Taranis AI, so you work with the latest information. Once teh conflicts are resolved and changes are submitted, the Story will be updated without raising conflicts later on (until the Story gets modified internally). It is the users' decision, whether they want to resolve the conflicts immediately with the version collected without proposals, or are skipped, preposals in MISP are resolved, and resolve conflicts later on next collection. In case a Story has proposals, it is possible to open the event in MISP with the "View Proposal" button.
-
- The content on the left is the current Story. The content on the right hand side editor is the new content and is the content, which is the content that is used for the eventual update. It is possible to take the right or left side of each difference shown using the diff window by clicking the arrows on the left sides of each content window.
-
- Both sides are freely editable and keyboard shortcuts for back and forward are supported. The context for keyboard shortcuts is decided based on where the cursor is (where it was clicked the last time - right or left side).
-
- > It is important, that the content on the right side stays a valid Story JSON.
-
- With "Get Right Side" button, it is possible to check what content will be submitted. "Submit Resolution" button is used to submit the update.
-
-Conflicts are stored in a temporary memory, to encourage a fresh MISP Collector recollection, before resolving conflicts and to prevent conflict resolution with outdated data.
-
 ## Digest Splitting
 
 Digest Splitting is a feature that allows the user to split all available URLs in the located element into individual News Items.
