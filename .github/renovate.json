@@ -1,0 +1,13 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "timezone": "Europe/Vienna",
+  "schedule": ["* 6-11 * * 1"],
+  "updateNotScheduled": false,
+  "groupName": "all dependencies",
+  "separateMajorMinor": false,
+  "prConcurrentLimit": 1,
+  "branchConcurrentLimit": 1,
+  "lockFileMaintenance": {
+    "enabled": false
+  }
+}
