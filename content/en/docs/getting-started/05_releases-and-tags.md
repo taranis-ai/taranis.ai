@@ -23,9 +23,10 @@ Core Taranis AI services follow a **stable and tested** release process:
 
 ### For Bots
 
-Bot containers have a different tagging strategy focused on experimental features:
+Bot containers follow a similar release process, with versions decoupled from the core Taranis AI services:
 
 | Tag | Description | Use Case | Stability |
 |-----|-------------|----------|-----------|
-| `latest` (alias: `stable`) | Latest manually tested and verified release | **Production bot deployments** | ✅ High |
-| `dev` or `experimental` | Development builds with experimental features | **Testing new bot capabilities** | ⚠️ Experimental |
+| `stable` | Latest manually tested and verified release | **Production deployments** | ✅ High |
+| `1.2.3` (semver) | Specific version (semantic versioning) | **Pinned production deployments** | ✅ High |
+| `latest` | Latest build from main branch | **Development/testing only** | ⚠️ May contain bugs |
