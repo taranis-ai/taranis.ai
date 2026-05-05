@@ -25,8 +25,9 @@ RSS Collector enables Taranis AI to collect data from a user-defined RSS feed (S
   * PROXY_SERVER
   * USE_GLOBAL_PROXY (ignore anything set in the `PROXY_SERVER` field, use what is currently set as a default in [Settings](/docs/admin/settings); learn more in section [Settings](/docs/admin/settings/#default-collector-proxy))
   * ADDITIONAL_HEADERS [accepts a valid `json`] (can be used to add additional headers, not all headers work as expected)
-  * CONTENT_LOCATION (use `key` of the feed schema, from where the content for news items should be extracted (e.g. `description` of the feed entry); if the `key` for a feed entry is not found, it falls back to behaviour, as if the key was not entered at all)
-  * XPATH (set this to specify the location of scraped element on the website, where the RSS feed entry points to; this is not an XPATH inside the RSS Feed)
+  * CONTENT_LOCATION (selects which field from the RSS entry should be used as the item content, for example `description` or `content:encoded`; when the collector uses content from the RSS entry, it first checks the field named here; if that field is empty or missing, it falls back through `content`, `content:encoded`, `summary`, and `description`)
+  * USE_FEED_CONTENT (controls whether the collector uses content from the RSS entry itself or fetches the linked article page; if this is enabled, the collector uses RSS entry content; if it is disabled, the collector fetches the linked article page; if it is not set, a non-empty `CONTENT_LOCATION` effectively enables using RSS entry content)
+  * XPATH (optional XPath expression used to limit the extracted content to a specific element; if `USE_FEED_CONTENT` is enabled, XPath is applied to the HTML content taken from the RSS entry; if the XPath does not match, the collector keeps the original RSS entry content; if `USE_FEED_CONTENT` is disabled, XPath is applied to the fetched article page; if the XPath does not match there, the collector does not fall back to another extraction method and the content may be empty)
   * TLP_LEVEL
   * REFRESH_INTERVAL (see [Bots - refresh_interval](/docs/admin/bots))
   * DIGEST_SPLITTING On/Off (creates News Items out of URLs present in the `Summary` field of RSS feed)
