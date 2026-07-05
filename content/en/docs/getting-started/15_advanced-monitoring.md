@@ -17,6 +17,19 @@ weight: 15
 
 Sentry can be used to monitor insights about **GUI**, **Core** and **database**. In Taranis AI: *Issues*, *Traces*, *Profiles* and *Queries* can be tracked.
 
+## Health and worker queues
+
+The core service exposes `/api/health` for readiness and dependency checks. It reports the database, Redis broker, and worker status when those services are available.
+
+Worker-backed actions such as collecting an OSINT source, running a bot, gathering a word list, rendering a product, or publishing a product can be queued even when no workers are connected. In that case the frontend shows a warning that the task was queued but may not be processed until a worker starts.
+
+If this warning appears:
+
+1. Verify Redis with the configured `REDIS_URL` and `REDIS_PASSWORD`.
+2. Verify that the `collector`, `cron`, and `workers` containers or Kubernetes deployments are running.
+3. Check the worker logs for failed startup, invalid `WORKER_TYPES`, or authentication errors against core.
+4. Use the admin worker and queue views to inspect queued, active, failed, and scheduled jobs.
+
 ## How to enable Sentry in Taranis AI
 
 To enable Sentry, set the `SENTRY_DSN` variables in the `.env` file before start of the application. More details about environment variables can be found [here](https://github.com/taranis-ai/taranis-ai/blob/master/docker/README.md).
