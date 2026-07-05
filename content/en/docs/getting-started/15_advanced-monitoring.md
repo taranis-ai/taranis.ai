@@ -19,7 +19,7 @@ Sentry can be used to monitor insights about **GUI**, **Core** and **database**.
 
 ## Health and worker queues
 
-The core service exposes `/api/health` for readiness and dependency checks. It reports the database, Redis broker, and worker status when those services are available.
+The core service exposes `/api/health` for readiness and dependency checks. It reports the database, seed data, Redis broker, and worker status when those services are available.
 
 Worker-backed actions such as collecting an OSINT source, running a bot, gathering a word list, rendering a product, or publishing a product can be queued even when no workers are connected. In that case the frontend shows a warning that the task was queued but may not be processed until a worker starts.
 
@@ -29,6 +29,8 @@ If this warning appears:
 2. Verify that the `collector`, `cron`, and `workers` containers or Kubernetes deployments are running.
 3. Check the worker logs for failed startup, invalid `WORKER_TYPES`, or authentication errors against core.
 4. Use the admin worker and queue views to inspect queued, active, failed, and scheduled jobs.
+
+See [Background Jobs](/docs/getting-started/07_background-jobs/) for worker services, queues, scheduler behavior, and Redis/RQ upgrade notes.
 
 ## How to enable Sentry in Taranis AI
 

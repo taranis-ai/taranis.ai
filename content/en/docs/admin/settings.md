@@ -18,13 +18,13 @@ Learn more about what TLP version 2.0 is under [first.org/tlp/](https://www.firs
 
 **Options**: Green, Amber, Amber+Strict, Red
 
-All newly collected items by [Collectors](/docs/admin/osint-sources) use this default TLP value. When this setting is changed, it does not affect the items that are already present in [Assess](/docs/assess) section.
+All newly collected items by [Collectors](/docs/admin/osint-sources/) use this default TLP value. When this setting is changed, it does not affect the items that are already present in [Assess](/docs/assess/) section.
 
-This setting can be overridden for each [collector](docs/admin/collectors) with the `TLP_LEVEL` field.
+This setting can be overridden for each [collector](/docs/admin/collectors/) with the `TLP_LEVEL` field.
 
 ## Default Collector Proxy
 
-When a default [collector](docs/admin/collectors) proxy is set, it can then be used in the collectors by enabling the switch `USE_GLOBAL_PROXY`.
+When a default [collector](/docs/admin/collectors/) proxy is set, it can then be used in the collectors by enabling the switch `USE_GLOBAL_PROXY`.
 
 ### The following matrix of the states applies
 
@@ -46,7 +46,7 @@ When a default [collector](docs/admin/collectors) proxy is set, it can then be u
 
 ## Default Collector Interval
 
-This value is used for `REFRESH_INTERVAL` for all collectors (OSINT Sources) when this field is left unset individually for all collectors. The syntax is the same as `REFRESH_INTERVAL` in [bot's settings](/docs/admin/bots/#bots-settings).
+This value is used for `REFRESH_INTERVAL` for all collectors (OSINT Sources) when this field is left unset individually for all collectors. The syntax is the same as `REFRESH_INTERVAL` in [bot settings](/docs/admin/bots/#common-settings).
 
 ## Export options
 
@@ -57,3 +57,5 @@ This value is used for `REFRESH_INTERVAL` for all collectors (OSINT Sources) whe
 
 - **Clear all Worker Queues**: Delete all messages from all worker queues. This action cannot be undone.
 - **Delete all Tags**: Delete all tags from all Stories in the system. This action cannot be undone.
+
+See [Background Jobs](/docs/getting-started/07_background-jobs/) before clearing worker queues.

@@ -9,37 +9,18 @@ weight: 3
 
 
 ## Description
-Assess displays a list of collected news items from various sources, which can be searched, filtered, and sorted based on different attributes (see [Filters](#filters)). Furthermore, news items can be merged, added to reports, analyzed and have their state changed  (see [Items](#items)).
+
+Assess is the analyst queue for collected Stories and News Items. It supports search, filtering, sorting, merging, bookmarks, report assignment, connector sharing, and review state changes.
 
 ## Functionalities
 
-### Omnisearch
+### Search
 
-The global search field can search across Stories, Reports, and Products. Use a scope prefix to search only one area:
-
-- `story: phishing campaign`
-- `report: weekly`
-- `product: pdf`
-
-Story searches can also use Assess filter tokens. Tokens can be combined with free text, for example:
+Use the Assess sidebar search for Story text search inside the current Assess view. Use the global [Omnisearch](/docs/search/) field to search across Stories, Reports, and Products, or to open Assess with filter tokens such as:
 
 ```text
-story: source:"CERT.at" tag:ransomware read:false important:true range:last7 sort:updated_desc
+story: source:"CERT.at" tag:ransomware read:false range:last7
 ```
-
-Supported Assess tokens are:
-
-- `source:` source name or ID
-- `group:` source group name or ID
-- `tag:` tag value
-- `read:`, `important:`, `relevant:`, `in-report:` with `true` or `false`
-- `cybersecurity:` with `yes`, `no`, `mixed`, or `incomplete`
-- `changed-by:me`
-- `range:` with `shift`, `24h`, `week`, `day`, `month`, `last7`, or `last<N>`
-- `from:` and `to:` for date or datetime values
-- `sort:` with `date_desc`, `date_asc`, `relevance`, `updated_desc`, or `updated_asc`
-
-Quote values containing spaces.
 
 ### Filters
 
@@ -52,11 +33,13 @@ Quote values containing spaces.
 
 For **manually created stories**, the "updated" timestamp is essentially the creation time. As a result, filtering by **Last day** for a manually created story will not return it, even if an older "published date" is set.
 
+Assess filters include search text, source, source group, tag, language, read state, important state, report membership, relevance, cybersecurity classification, changed-by actor, date range, and sort order.
+
 Users can save the current Assess filters from the **Saved filters** button. A saved filter can be marked as the default for the user profile. Dashboard shortcuts show saved Assess filters so frequently used queues can be opened directly.
 
-
 ### Items
-News items collected by [Collectors](../admin/collectors.md) become visible in the Assess section. These items can later be grouped by context, either automatically by the [Bots](../admin/bots.md) or manually.
+
+News items collected by [Collectors](/docs/admin/collectors/) become visible in Assess. They can be grouped into Stories automatically by [Bots](/docs/admin/bots/) or manually by analysts.
 
 ![AssessStory](/docs/assess-story.png)
 
@@ -69,6 +52,16 @@ Charts:
 * The y-axis of the line chart can be adapted and is the same for all charts in the current items list. Therefore, charts can be compared properly.
 
 Story actions include marking read/unread, marking important, sharing to connectors, ungrouping, version history, deleting, editing, adding to reports, and bookmarking. Bulk actions are available after selecting stories; visible shortcuts include `Shift+R` for adding to a report and `Shift+B` for bookmarking.
+
+### Story import
+
+Stories can be created manually or imported from JSON. Imports are useful for transferring data between Taranis AI instances or restoring exported analyst work.
+
+Use metadata-free story exports for normal re-imports. Metadata-rich exports include internal tags, attributes, votes, relevance, and similar state; clean those fields before importing them into another instance unless you deliberately want to carry that state over.
+
+### Version history
+
+Stories keep a revision history. Use **Version History** from the Story actions menu to inspect saved revisions and compare the changes between adjacent revisions. Revision diffs are intended for audit and troubleshooting; they do not currently provide rollback.
 
 ### Bookmarks
 
