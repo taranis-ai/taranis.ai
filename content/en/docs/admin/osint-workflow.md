@@ -54,19 +54,23 @@ It has to be mentioned, that this include/exclude filtering happens during the n
 
 After the collection, it is possible to adapt news items.
 
-Therefore, following bots are currently available:
+Common bots include:
 
-- Wordlist bot: Tags news items by wordlist
-- IOC bot: Finds indicators of compromise in news items
-- NLP tagging bot: Tags news items via NLP
-- Story bot: Applies story clustering to news items
-- Summary bot: Summarizes stories
+- Wordlist Bot: Tags News Items by wordlist.
+- IOC Bot: Finds indicators of compromise in News Items.
+- NLP Bot: Tags News Items via named entity recognition.
+- Story Clustering Bot: Groups related Stories.
+- Summary Bot: Summarizes Stories and can generate Story titles.
+- Sentiment Analysis Bot: Adds sentiment attributes to News Items.
+- Cybersecurity Classifier Bot: Classifies whether content is cybersecurity related.
 
 CRUD: Bots can be created, updated and deleted.
 
 Index: Decides the order of bots
 
 RUN_AFTER_COLLECTOR: Indicates if bot is active after collection
+
+LLM-backed bots can use the optional [LLM Bot Service](/docs/getting-started/08_llm-bot/). Full bot configuration is documented in [Bots](/docs/admin/bots/).
 
 ![bot_selection](/docs/osint/bot_selection.png)
 

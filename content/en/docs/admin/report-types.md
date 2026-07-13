@@ -10,10 +10,10 @@ When creating new Reports, one of the created report types have to be selected (
 {{% /pageinfo %}}
 
 
-### Attributes 
-Desired attributes need to be created first. Then they can be managed by the admin user. Besides name, description and default value also type, validator and validator parameter can be set. 
+### Attributes
+Desired attributes need to be created first. Then they can be managed by the admin user. Besides name, description and default value also type, validator and validator parameter can be set.
 
-### Report Types - CRUD 
+### Report Types - CRUD
 * Create: Report types can be created ("New item"). After adding a new attribute group, different attributes can be added to this group.
 * Read & Update: Report types (including their attribute groups) can be updated by clicking on them in the list. Their update will not affect Reports, which already use the Report Type
 * Delete: One or multiple reports can be deleted at once.
@@ -33,4 +33,4 @@ Report Types - Add new Attribute Group
 
 Report Types - Select new Attribute from list
 
-![report_type_selecet_attribute](/docs/report_type_select_attribute.png)
+![report_type_select_attribute](/docs/report_type_select_attribute.png)
