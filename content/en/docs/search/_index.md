@@ -60,4 +60,4 @@ Quote values that contain spaces. Omnisearch suggestions are loaded only when th
 
 Assess sidebar filters can be saved per user. One saved filter can be marked as the default, which makes `/assess` open that filtered queue automatically. Use `/assess?reset=true` to bypass the default and show the unfiltered list.
 
-Saved filters also appear as dashboard shortcuts, so common queues such as "Unread important stories" can be opened without rebuilding the filter each time.
+Saved filters also appear as dashboard shortcuts, so common queues such as "Unread important stories" can be opened without rebuilding the filter each time. See [Filter Lists and Saved Filters](/docs/assess/filter-lists/).
