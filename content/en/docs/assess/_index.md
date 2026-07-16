@@ -35,7 +35,7 @@ For **manually created stories**, the "updated" timestamp is essentially the cre
 
 Assess filters include search text, source, source group, tag, language, read state, important state, report membership, relevance, cybersecurity classification, changed-by actor, date range, and sort order.
 
-Users can save the current Assess filters from the **Saved filters** button. A saved filter can be marked as the default for the user profile. Dashboard shortcuts show saved Assess filters so frequently used queues can be opened directly.
+Users can save the current Assess filters from the **Saved filters** button. A saved filter can be marked as the default for the user profile. Dashboard shortcuts show saved Assess filters so frequently used queues can be opened directly. See [Filter Lists and Saved Filters](/docs/assess/filter-lists/).
 
 ### Items
 
@@ -67,7 +67,7 @@ Stories keep a revision history. Use **Version History** from the Story actions 
 
 Bookmark collections are private per user. A story can be bookmarked from its action menu, or selected stories can be added to an existing or new collection from the Assess toolbar. If a user bookmarks a single story before creating any collections, Taranis AI creates a default collection named `Bookmarks`.
 
-The Assess page shows up to six bookmark collections in a compact bar. Use **All bookmarks** to open the full bookmark page, rename or delete collections, reorder them, and remove stories from a collection. Removing a story from a bookmark collection does not delete the story from Assess.
+The Assess page shows up to six bookmark collections in a compact bar. Use **All bookmarks** to open the full bookmark page, rename or delete collections, reorder them, and remove stories from a collection. Removing a story from a bookmark collection does not delete the story from Assess. See [Bookmarks](/docs/assess/bookmarks/).
 
 ### Story Edit Advanced View
 
