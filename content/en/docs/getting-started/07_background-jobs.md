@@ -58,6 +58,12 @@ Example degraded response:
 
 When `workers` is `down`, check the `collector`, `workers`, and `cron` containers or deployments first, then inspect worker logs for bad `WORKER_TYPES`, invalid API keys, Redis authentication failures, or failed bot service calls.
 
+## Task failures
+
+The task and Failed Jobs views report terminal RQ failures: unhandled task exceptions, job timeouts, and killed workhorse processes. Failed Jobs includes RQ's exception detail when it is available.
+
+A queued job without a worker, a late schedule, or a blocked queue is an operational liveness problem, not a recorded task failure. Check `/api/health`, the worker containers, and Redis connectivity before treating it as a failed task.
+
 ## Scheduled jobs
 
 Collectors and bots use cron-like schedules. Core stores managed schedule definitions in Redis, and the `cron` service reconciles those definitions with enabled sources and bots. Changing a collector or bot schedule does not require restarting the workers.

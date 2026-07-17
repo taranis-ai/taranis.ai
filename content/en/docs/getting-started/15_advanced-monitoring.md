@@ -32,6 +32,12 @@ If this warning appears:
 
 See [Background Jobs](/docs/getting-started/07_background-jobs/) for worker services, queues, scheduler behavior, and Redis/RQ upgrade notes.
 
+## Audit logging
+
+Core audit logging is enabled by default. It writes structured JSON events to stdout for human-authenticated write requests and login attempts. Events contain request metadata such as the timestamp, path, status, user, and client IP; they never include request bodies, credentials, tokens, or other secrets.
+
+Set `AUDIT_LOG_ENABLED=false` only when log collection is not appropriate for the deployment. Send the core container's stdout to your normal log collector for retention and search.
+
 ## How to enable Sentry in Taranis AI
 
 To enable Sentry, set the `SENTRY_DSN` variables in the `.env` file before start of the application. More details about environment variables can be found [here](https://github.com/taranis-ai/taranis-ai/blob/master/docker/README.md).

@@ -72,6 +72,8 @@ RUN_AFTER_COLLECTOR: Indicates if bot is active after collection
 
 LLM-backed bots can use the optional [LLM Bot Service](/docs/getting-started/08_llm-bot/). Full bot configuration is documented in [Bots](/docs/admin/bots/).
 
+The optional IntelOwl Bot enriches indicators extracted by the IOC Bot. Configure IntelOwl and keep the IOC Bot before it in the run order; see [IntelOwl enrichment](/docs/admin/intelowl/).
+
 ![bot_selection](/docs/osint/bot_selection.png)
 
 ## 6. Collect Sources

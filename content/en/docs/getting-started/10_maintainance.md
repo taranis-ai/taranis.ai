@@ -8,6 +8,8 @@ weight: 10
 
 Use published images for deployment upgrades. Do not build application images on production hosts unless you are intentionally testing a custom build.
 
+Only upgrades to the immediately following Taranis AI release are tested and supported. For a larger version gap, upgrade one release at a time and verify the deployment after every step.
+
 ```bash
 cd taranis-ai/docker
 docker compose pull

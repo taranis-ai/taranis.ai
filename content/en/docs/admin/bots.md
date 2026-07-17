@@ -20,6 +20,7 @@ Bots run as worker jobs. They can be triggered manually, scheduled with `REFRESH
 | Summary Bot | Generates Story summaries and, optionally, Story titles. |
 | Sentiment Analysis Bot | Adds sentiment attributes to News Items. |
 | Cybersecurity Classifier Bot | Classifies whether Story content is cybersecurity related. |
+| IntelOwl Bot | Enriches IOC tags through an IntelOwl instance. |
 
 Implementation details are available in the [worker bot source](https://github.com/taranis-ai/taranis-ai/tree/master/src/worker/worker/bots).
 
@@ -32,11 +33,14 @@ Implementation details are available in the [worker bot source](https://github.c
 | Type | Bot implementation to run. |
 | Index | Execution order when multiple bots run after collection. |
 | `RUN_AFTER_COLLECTOR` | Runs the bot after collector jobs. |
+| `RUN_AFTER_BOTS` | Optional configured bot instances that must finish before this bot runs. |
 | `REFRESH_INTERVAL` | Cron-like schedule, for example `0 */8 * * *`. |
 | `REQUESTS_TIMEOUT` | HTTP timeout for calls to external bot services. |
 | `BOT_API_KEY` | API key sent to external bot services when needed. |
 
 Scheduled bots are handled by Redis/RQ. See [Background Jobs](/docs/getting-started/07_background-jobs/) for worker and scheduler health checks.
+
+Use the bot run-order editor instead of entering `RUN_AFTER_BOTS` manually. Bot dependencies refer to configured bot instances, not bot types. The IntelOwl Bot depends on the IOC Bot so it can enrich extracted indicators.
 
 ## LLM-backed bots
 
@@ -62,3 +66,7 @@ The Sentiment Analysis Bot writes these News Item attributes:
 - `sentiment_category`
 
 The Story Edit advanced view displays the sentiment status when these attributes are present.
+
+## IntelOwl enrichment
+
+The [IntelOwl enrichment guide](/docs/admin/intelowl/) covers required analyzers, bot configuration, and viewing CTI results.
