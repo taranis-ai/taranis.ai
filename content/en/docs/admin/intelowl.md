@@ -10,7 +10,7 @@ Taranis AI can send indicators of compromise (IOCs) to an IntelOwl instance thro
 
 1. Deploy IntelOwl using its supported installation method and wait for its first-run migrations to finish.
 2. Create a dedicated IntelOwl API token for Taranis AI.
-3. Enable and configure at least one requested analyzer for every IOC type you intend to enrich.
+3. Enable and configure at least one supported analyzer for every IOC type you intend to enrich.
 4. In Taranis AI, enable **IOC Bot** and **IntelOwl Bot**. Keep IOC Bot before IntelOwl Bot in the bot run order.
 
 Configure the IntelOwl Bot with:
@@ -23,11 +23,11 @@ Configure the IntelOwl Bot with:
 | `INTEL_OWL_TLP` | TLP shared with IntelOwl; normally `CLEAR`. |
 | `INTEL_OWL_POLL_TIMEOUT_SECONDS` | Maximum wait for IntelOwl processing; defaults to 1800 seconds. |
 
-## Required analyzers
+## Supported analyzers
 
-Taranis AI requests a fixed analyzer set based on the IOC type. IntelOwl must have at least one usable analyzer for each type you want to process.
+Taranis AI supports the following IntelOwl analyzers for each IOC type. Configure at least one listed analyzer for each type you want to process.
 
-| IOC type | Requested analyzers |
+| IOC type | Supported analyzers |
 | --- | --- |
 | CVE | `NVD_CVE`, `Vulners` |
 | IP | `ThreatFox`, `URLhaus`, `AbuseIPDB`, `GreyNoiseCommunity`, `VirusTotal_v3_Get_Observable` |
@@ -36,7 +36,7 @@ Taranis AI requests a fixed analyzer set based on the IOC type. IntelOwl must ha
 | Hash | `MalwareBazaar_Get_Observable`, `YARAify_Search`, `VirusTotal_v3_Get_Observable` |
 | Email | `EmailRep`, `HaveIBeenPwned` |
 
-If IntelOwl reports that no analyzers can run, enable the requested analyzer in IntelOwl and configure its required provider credentials. Check IntelOwl's job detail for the missing analyzer or credential.
+If IntelOwl reports that no analyzer can run, enable a listed analyzer and configure its required provider credentials. Check the job detail for the missing analyzer or credential.
 
 ## View enrichment results
 

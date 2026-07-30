@@ -13,7 +13,7 @@ Organizations can be added with following parameters defining them: name, descri
 
 Define roles with permissions. Roles are then assigned to users to control access to administration, Assess, Analyze, Publish, connector, and worker features.
 
-Access-control lists (ACLs) restrict user-facing content and reference data. A source can be granted directly or through an ACL on one of its source groups; a source-group wildcard grants access to all sources, including ungrouped sources. `ADMIN_OPERATIONS` bypasses these ACL checks, but does not bypass TLP restrictions. Administration and configuration access is controlled by the relevant `CONFIG_*` permissions.
+Access-control lists (ACLs) restrict user-facing content and reference data. A user can be granted access to a source directly or through an ACL on one of its source groups; a source-group wildcard grants access to all sources, including ungrouped sources. `ADMIN_OPERATIONS` bypasses these ACL checks, but does not bypass TLP restrictions. Administration and configuration access is controlled by the relevant `CONFIG_*` permissions.
 
 ### Users
 
