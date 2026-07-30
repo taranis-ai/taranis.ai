@@ -40,7 +40,7 @@ If IntelOwl reports that no analyzer can run, enable a listed analyzer and confi
 
 ## View enrichment results
 
-CTI dialogs show stored enrichment rows for matching IOCs on News Items, Stories, Reports, and Assets. Results remain subject to the user's normal permissions and TLP visibility.
+You can view enrichment results for matching IOCs in the CTI dialogs for News Items, Stories, Reports, and Assets. Your normal permissions and TLP visibility still apply.
 
 ## Security
 
