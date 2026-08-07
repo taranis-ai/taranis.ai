@@ -18,8 +18,14 @@ Core Taranis AI services follow a **stable and tested** release process:
 | Tag | Description | Use Case | Stability |
 |-----|-------------|----------|-----------|
 | `stable` | Latest manually tested and verified release | **Production deployments** | ✅ High |
-| `v1.2.3` (semver) | Specific version (semantic versioning) | **Pinned production deployments** | ✅ High |
+| `1.2.3` (semver) | Specific version (semantic versioning) | **Pinned production deployments** | ✅ High |
 | `latest` | Latest build from main branch | **Development/testing only** | ⚠️ May contain bugs |
+
+## Upgrade support
+
+Only upgrades to the immediately following Taranis AI release are tested and supported. For a larger version gap, upgrade one release at a time and verify the deployment after every step.
+
+Review the [GitHub release notes](https://github.com/taranis-ai/taranis-ai/releases) before each upgrade. Follow [Maintenance](/docs/getting-started/10_maintainance/) for the upgrade, verification, and rollback procedure.
 
 ### For Bots
 
