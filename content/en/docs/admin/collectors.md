@@ -10,9 +10,10 @@ weight: 5
 2. [Simple Web Collector](https://github.com/taranis-ai/taranis-ai/blob/master/src/worker/worker/collectors/simple_web_collector.py)
 3. [RT Collector](https://github.com/taranis-ai/taranis-ai/blob/master/src/worker/worker/collectors/rt_collector.py)
 4. [MISP Collector](https://github.com/taranis-ai/taranis-ai/blob/master/src/worker/worker/collectors/misp_collector.py)
+5. [Mastodon Collector](/docs/admin/mastodon-collector/)
 
 The administration view now allows users to use the Preview feature to see the result of the configuration without the items being processed further for the Assess view.
-This feature is available for RSS, Simple Web and RT collector.
+This feature is available for RSS, Simple Web, RT, and Mastodon collectors.
 
 ## RSS Collector
 
@@ -81,9 +82,11 @@ When content cannot be reliably collected using the [Basic configuration](#basic
 (See [tutorial how to find it](https://www.appsierra.com/blog/how-to-get-xpath-in-chrome)), can be useful.
 It is crucial to specify the XPath of the precise element containing the desired data.
 
-### Configuration for Mastodon Feeds
+### RSS alternative for Mastodon feeds
 
-To set up an RSS Collector for collecting posts from a Mastodon hashtag or user, follow these steps:
+The native [Mastodon Collector](/docs/admin/mastodon-collector/) is the preferred option because it supports authenticated timelines, account lookup, pagination, and collection cursors. The RSS Collector remains available as a simpler alternative for public hashtag or account feeds exposed by an instance.
+
+To collect a Mastodon RSS feed, follow these steps:
 
 1. **Finding the Mastodon RSS Feed URL**:
    * **Hashtag Feed**: Add `.rss` to the hashtag URL. For example, to collect posts tagged with #cybersecurity:
