@@ -10,7 +10,7 @@ weight: 5
 2. [Simple Web Collector](https://github.com/taranis-ai/taranis-ai/blob/master/src/worker/worker/collectors/simple_web_collector.py)
 3. [RT Collector](https://github.com/taranis-ai/taranis-ai/blob/master/src/worker/worker/collectors/rt_collector.py)
 4. [MISP Collector](https://github.com/taranis-ai/taranis-ai/blob/master/src/worker/worker/collectors/misp_collector.py)
-5. [Mastodon Collector](/docs/admin/mastodon-collector/)
+5. [Mastodon Collector](/docs/admin/collectors/mastodon-collector/)
 
 The administration view now allows users to use the Preview feature to see the result of the configuration without the items being processed further for the Assess view.
 This feature is available for RSS, Simple Web, RT, and Mastodon collectors.
@@ -84,7 +84,7 @@ It is crucial to specify the XPath of the precise element containing the desired
 
 ### RSS alternative for Mastodon feeds
 
-The native [Mastodon Collector](/docs/admin/mastodon-collector/) is the preferred option because it supports authenticated timelines, account lookup, pagination, and collection cursors. The RSS Collector remains available as a simpler alternative for public hashtag or account feeds exposed by an instance.
+The native [Mastodon Collector](/docs/admin/collectors/mastodon-collector/) is the preferred option because it supports authenticated timelines, account lookup, pagination, and collection cursors. The RSS Collector remains available as a simpler alternative for public hashtag or account feeds exposed by an instance.
 
 To collect a Mastodon RSS feed, follow these steps:
 

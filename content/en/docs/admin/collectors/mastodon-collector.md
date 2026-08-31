@@ -2,6 +2,8 @@
 title: "Mastodon Collector"
 description: "Collect Mastodon hashtag, home, and account timelines through the Mastodon API."
 weight: 5
+aliases:
+  - /docs/admin/mastodon-collector/
 ---
 
 The Mastodon Collector imports posts from a Mastodon instance through scheduled API polling. It supports hashtag timelines, the access-token owner's home timeline, and public posts from a specific account.
