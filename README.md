@@ -27,6 +27,9 @@ Start the local server with
 hugo server
 ```
 
+The documentation sidebar uses Docsy's compact, foldable navigation. Put child
+pages inside their parent section directory so they appear under that section.
+
 ## Deploy
 
 GitHub Actions publish master branch to GitHub Pages
