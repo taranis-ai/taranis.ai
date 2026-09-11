@@ -17,6 +17,7 @@ To print this documentation visit [/_print/docs](/_print/docs/)
 ## Where to start
 
 - [Getting Started](/docs/getting-started/) covers deployment, releases, Redis/RQ background jobs, `llm-bot`, TLS, and monitoring.
+- [Dashboard](/docs/dashboard/) covers workflow statistics, guided analyst review, recently active tags, saved filters, customization, conflict resolution, and the Admin Dashboard.
 - [Omnisearch](/docs/search/) covers global search syntax and saved Assess filters.
 - [Assess](/docs/assess/) covers Story review, filters, bookmarks, imports, and version history.
 - [Analyze](/docs/analyze/) covers Reports and the handoff to Products.
