@@ -8,6 +8,7 @@ description: Administration section and general workflow
 These options are accessible only via users with respective administration privileges. (See [User management](/docs/admin/user-management/))
 {{% /pageinfo %}}
 
+See [Admin Dashboard](/docs/dashboard/administration/) for workflow statistics, queue navigation, release information, system health, and task outcomes.
 
 ## Screenshots
 

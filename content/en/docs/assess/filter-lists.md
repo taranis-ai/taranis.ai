@@ -29,4 +29,4 @@ Open **Saved filters** from the Assess sidebar. Saving requires at least one act
 
 One saved filter can be marked as the default. When a default exists, opening `/assess` without query parameters opens that queue automatically. Use `/assess?reset=true` to bypass the default and open the unfiltered Assess list.
 
-Saved filters also appear as Dashboard shortcuts. Dashboard cards can be applied directly or deleted from the Dashboard.
+Saved filters also appear as [Dashboard shortcuts](/docs/dashboard/#saved-filters). Dashboard cards can be applied directly or deleted from the Dashboard.

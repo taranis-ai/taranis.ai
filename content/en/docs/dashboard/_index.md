@@ -1,39 +1,65 @@
 ---
 title: "Dashboard"
-description: Homepage after logging into Taranis AI
+description: Review workflow statistics, open analyst queues, and explore recently active tags.
 weight: 7
 ---
 
-The Dashboard displays frequent topics, application statistics, and shortcuts into common analyst queues. Topic cards open Assess with the matching tag filter. Statistic fields link to the related sections.
+The Dashboard is the starting page after login. It brings together workflow statistics, recently active tags, and your saved Assess filters. Use it to check incoming information and choose a queue to work through.
 
-Saved Assess filters can also appear as Dashboard cards. Use them for recurring queues such as unread important Stories, language-specific monitoring, or shift handover views.
+![Dashboard overview](/docs/dashboard.png)
 
-![dashboard](/docs/dashboard.png)
+## Workflow cards
 
+Select a card's title to open the corresponding workspace.
 
-### Conflict resolution
-> experimental feature
+| Card | What it shows | Where it leads |
+| --- | --- | --- |
+| **Assess** | Total News Items and Stories, plus News Items and Stories this week. | [Assess](/docs/assess/) for reviewing collected information. |
+| **Analyze** | Completed Reports, Reports in progress, and Reports created this week. | [Analyze](/docs/analyze/) for preparing Reports. |
+| **Publish** | Total Products and Products created this week. | [Publish](/docs/publish/) for preparing and publishing Products. |
+| **Connectors** | Pending conflicts, split into Story conflicts and News Item conflicts. | [Conflict resolution](/docs/dashboard/conflict-resolution/) for reviewing incoming changes. |
 
-Conflicts can currently be resolved in the Connectors section accessible in the general and administration dashboard.
+**This week** runs from Monday at 00:00 UTC through the current time. News Items are counted by publication date; Stories, Reports, and Products are counted by creation date. Future dates are excluded. For example, an older article collected today may increase the News Item total without increasing this week's News Item count.
 
-In the Conflict Resolution View it is possible to resolve given conflicts.
+These are instance-wide statistics. An Assess filter or a user's content permissions can produce a different count in the destination workspace. The Publish count includes all Products; it does not indicate how many have been published or are ready to publish. Dashboard statistics are cached for 30 seconds, so recent changes may take a short time to appear when reloading.
 
-In the view, all stories that have conflicts will be shown in expandable cards. One by one it is possible to inspect them and resolve them.
+## Start analyst review
 
-There are two main conflict types:
-- Story conflicts
-- News Item conflicts
+The **Start analyst review** button on the Assess card opens a guided workflow through Stories, a Report, and a Product.
 
-##### Story conflicts
-Story conflicts occur when change of the same story happened in MISP and locally as well. In that case a clean update cannot happen.
+1. Choose an incomplete Report, or create one with a title and Report Type.
+2. Review a snapshot of the current shift's unread Stories, newest first. Configure **End of shift** in [User settings](/docs/settings/) for shift filtering.
+3. Use **Add** to attach a Story to the Report, mark it read, and clear its important flag. **Dismiss** marks it read and clears important without adding it. **Skip** advances without changing the Story. The corresponding keyboard shortcuts are `A`, `D`, and `S` when focus is outside editable controls.
+4. After the queue, complete the Report if needed and continue to Publish. If exactly one existing Product contains the Report, that Product opens; otherwise, a new Product opens with the Report preselected. Review and publish the Product using the normal publishing controls.
 
-This example shows that in the Story in MISP was a News Item removed and two other Story fields (comments and description) were updated.
-![conflict_resolution_view](/docs/conflict_resolution_view.png)
+The Story queue is fixed when the review starts; Stories arriving later belong to a subsequent review. The guided workflow does not publish automatically.
 
-##### News Item Conflicts
-The News Item conflicts occur when stories have divergent news items and cannot be automatically updated due to a local change. The user is offered to choose from 2 options of resolution:
-1. **Keep Local Stories + Add Unique Items** - local Stories stay untouched and News Items that are new are ingested separately.
-2. **Take Incoming Story (Replace Local)** - local Stories are ungrouped and the incoming Story is ingested as is.
-![conflict_resolution_view](/docs/conflict_news_item_view.png)
----
-Conflicts are stored in a temporary memory, to encourage a fresh MISP Collector recollection, before resolving conflicts and to prevent conflict resolution with outdated data.
+The button requires Assess access and update permissions, Analyze access/create/update permissions, and Publish access/create permissions. See [User management](/docs/admin/user-management/) if it is missing.
+
+## Recently active tags
+
+**Recently Active Tags** groups tags by type, such as Country or Location. Select an individual tag to open Assess with that tag filter, or select the card's heading to explore all tags of that type. The first three cards are visible initially; **Show more** reveals the rest.
+
+The default activity window is seven days. A tag qualifies when it appears in a Story created within that window, but its displayed count includes matching Stories across all time. Each card lists up to five tags, ordered by their Story counts. **Total stories** sums those displayed tag counts, so a Story with several tags can contribute more than once.
+
+See [Tags and Dashboard Settings](/docs/dashboard/settings/) for the tag table, map, activity window, and display options.
+
+## Saved filters
+
+Save recurring queues in Assess to make them available under **Saved Filters** on your Dashboard. For example, save unread important Stories, a language-specific queue, or a topic used during shift handover.
+
+Select a saved filter's title to open that Assess queue. Cards show the filter URL and a **Default** badge when applicable. The first three are visible initially; **Show more** reveals additional filters. This section appears once you have saved a filter.
+
+**Delete** removes the saved filter from your profile after confirmation, including its Assess shortcut. It does not delete Stories. Create or update filters and choose a default through the Assess **Saved filters** dialog. See [Filter Lists and Saved Filters](/docs/assess/filter-lists/).
+
+## External signals
+
+An optional **PizzINT / DOUGHCON** card displays an external signal under **External Signals**. It is disabled by default and can be enabled per user through **Edit Dashboard**. See [PizzINT / DOUGHCON](/docs/dashboard/settings/#pizzint--doughcon) for its fields and freshness indicators.
+
+## Conflict resolution
+
+Open **Connectors** to choose **Story Conflicts** or **News Item Conflicts**. The [Conflict Resolution guide](/docs/dashboard/conflict-resolution/) explains how to compare incoming MISP changes and choose a resolution.
+
+## Administration
+
+Users with administration privileges also have an [Admin Dashboard](/docs/dashboard/administration/) with queue information, release details, system health, and task outcomes.
