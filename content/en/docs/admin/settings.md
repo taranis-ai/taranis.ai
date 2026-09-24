@@ -50,8 +50,20 @@ This value is used for `REFRESH_INTERVAL` for all collectors (OSINT Sources) whe
 
 ## Export options
 
-- **Export all Stories**: Export all stories without any metadata (tags, etc.).
-- **Export all Stories with metadata**: Export all stories with all the metadata (tags, attributes, likes, dislikes, relevance, etc.). It is not safe to use these data back for importing (some tags and attributes are used for internal purposes and could create unexpected behaviour). Drop metadata before importing, if doing so.
+Open **Export Stories** to download an instance-wide JSON array, optionally limited by Story creation date. This requires `ADMIN_OPERATIONS` and does not apply Assess content ACL filtering.
+
+- **All Stories**: Story IDs and creation dates, plus News Item IDs, titles, and content.
+- **All Stories With Metadata**: Also includes Story metadata and attributes, and detailed News Items with attributes and tags.
+
+Enter **From** and **To** in your profile timezone, shown beside the form. Both bounds are inclusive. Blank bounds are optional; From alone ends at the current time. Future dates, reversed ranges, and ambiguous or nonexistent local times are rejected.
+
+## Import Stories
+
+Upload an Assess or Admin Story export using **Import Stories**. Both minimal and metadata exports are accepted without manually stripping metadata for compatibility. This is the same importer used by **Assess → Create manual news item → Create from file**, and the import API requires `ASSESS_CREATE`.
+
+Stories are the primary transfer format; existing standalone News Item JSON is also accepted. Imports do not merge or overwrite existing content: duplicate IDs or News Item hashes fail the whole batch. These exports are content transfers, not database backups.
+
+See [Story import and export](/docs/assess/story-transfers/) for the workflow matrix, accepted formats, source handling, and transfer limits.
 
 ## Danger Zone
 
