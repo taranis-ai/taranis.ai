@@ -53,11 +53,11 @@ Charts:
 
 Story actions include marking read/unread, marking important, sharing to connectors, ungrouping, version history, deleting, editing, adding to reports, and bookmarking. Bulk actions are available after selecting stories; visible shortcuts include `Shift+R` for adding to a report and `Shift+B` for bookmarking.
 
-### Story import
+### Story import and export
 
-Stories can be created manually or imported from JSON. Imports are useful for transferring data between Taranis AI instances or restoring exported analyst work.
+Use **Share → Export to JSON** to transfer an individual Story or a selection of Stories. Import either an Assess or Admin export through **Create manual news item → Create from file** or **Admin → Settings → Import Stories**. Both import screens accept complete Stories, including exports with metadata.
 
-Use metadata-free story exports for normal re-imports. Metadata-rich exports include internal tags, attributes, votes, relevance, and similar state; clean those fields before importing them into another instance unless you deliberately want to carry that state over.
+Stories are the primary transfer format. Existing standalone News Item JSON can also be imported; each item receives a new parent Story. Transfers do not restore all instance state and do not merge or overwrite existing content. See [Story import and export](/docs/assess/story-transfers/) for formats, permissions, and limitations.
 
 ### Version history
 
