@@ -22,6 +22,8 @@ Use the Assess sidebar search for Story text search inside the current Assess vi
 story: source:"CERT.at" tag:ransomware read:false range:last7
 ```
 
+For natural-language questions and summaries, use [Chat](/docs/chat/) when enabled. Search answers link back to Assess with the generated filters applied.
+
 ### Filters
 
 ![AssessFilters](/docs/assess-nav-annotated.png)

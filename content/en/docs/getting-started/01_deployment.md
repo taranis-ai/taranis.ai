@@ -58,6 +58,12 @@ The Compose deployment includes the optional `llm-bot` service for LLM-backed su
 
 See [LLM Bot Service](/docs/getting-started/08_llm-bot/) for endpoint mapping and bot configuration.
 
+### Analyst Chat
+
+Optional [Chat](/docs/chat/) is disabled by default. Enable `CHAT_ENABLED=true` on core and frontend, then configure the provider in **Admin Settings > Chat**. Chat uses Redis and calls its provider directly from core, independently of `llm-bot` and workers.
+
+See [Chat deployment](/docs/getting-started/09_chat/) for setup, proxy timeouts, validation, and disabling the feature while preserving history.
+
 ### Images and tags
 
 Taranis AI images are tagged as follows:

@@ -30,6 +30,12 @@ hugo server
 The documentation sidebar uses Docsy's compact, foldable navigation. Put child
 pages inside their parent section directory so they appear under that section.
 
+The [Chat guide](content/en/docs/chat/_index.md) is paired with
+[provider settings](content/en/docs/admin/chat.md) and
+[deployment instructions](content/en/docs/getting-started/09_chat.md).
+Its screenshots in `static/docs/chat-*.png` show the local application's workspace,
+a live Story search, and configured provider settings.
+
 ## Deploy
 
 GitHub Actions publish master branch to GitHub Pages
