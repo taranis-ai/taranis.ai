@@ -20,6 +20,7 @@ To print this documentation visit [/_print/docs](/_print/docs/)
 - [Dashboard](/docs/dashboard/) covers workflow statistics, guided analyst review, recently active tags, saved filters, customization, conflict resolution, and the Admin Dashboard.
 - [Omnisearch](/docs/search/) covers global search syntax and saved Assess filters.
 - [Assess](/docs/assess/) covers Story review, filters, bookmarks, imports, and version history.
+- [Chat](/docs/chat/) covers natural-language Story searches, summaries, follow-up questions, and conversation history.
 - [Analyze](/docs/analyze/) covers Reports and the handoff to Products.
 - [Publish](/docs/publish/) covers rendering, previews, manual publishing, and autopublish.
 - [Administration](/docs/admin/) covers users, OSINT sources, collectors, bots, publishers, report types, product types, and OpenAPI.

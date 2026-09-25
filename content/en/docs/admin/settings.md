@@ -9,6 +9,7 @@ weight: 8
 1. Default TLP Level
 2. Default Collector Proxy
 3. Default Collector Interval
+4. [Chat provider settings](/docs/admin/chat/) (when Chat is enabled)
 
 ## Default TLP Level
 
