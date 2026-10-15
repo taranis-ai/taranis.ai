@@ -10,6 +10,8 @@ These options are accessible only via users with respective administration privi
 
 See [Admin Dashboard](/docs/dashboard/administration/) for workflow statistics, queue navigation, release information, system health, and task outcomes.
 
+See [Backup / Restore](/docs/admin/backup-restore/) for backing up and recovering Docker Compose and Kubernetes deployments.
+
 ## Screenshots
 
 Administration dashboard showing statistics and all its functionalities (sidebar)

@@ -4,6 +4,8 @@ description: How to deploy Taranis AI on Kubernetes
 weight: 2
 ---
 
+For database and persistent-volume backups and recovery, see [Backup / Restore](/docs/admin/backup-restore/#kubernetes-and-helm).
+
 ## Configuration
 
 Clone via git
@@ -29,10 +31,10 @@ See [Releases and Container Tags](/docs/getting-started/05_releases-and-tags) fo
 Download and install [kompose.io](https://kompose.io/installation/)
 
 ```bash
-# resovle variables from .env into taranis-ai/docker/compose.yml 
+# resovle variables from .env into taranis-ai/docker/compose.yml
 docker compose config > resolved-compose.yml
 
-# convert compose file to kubernetes 
+# convert compose file to kubernetes
 kompose --file resolved-compose.yaml convert
 ```
 
