@@ -2,18 +2,19 @@
 title: Taranis AI
 heroUrl: /assess_landing_page.png
 features:
-  - title: Asynchronus Task Queue
+  - title: Chat with RAG
+    icon: fas fa-comments
+    description: >
+      Ask questions about collected Stories and summarize relevant results with
+      [Chat](/docs/chat/), powered by retrieval-augmented generation (RAG).
+  - title: Asynchronous Task Queue
     icon: fas fa-list-check
     description: >
-      Task queue via [Celery](https://docs.celeryq.dev/) for asynchronous news item processing
-  - title: Modern NLP features like entity recognition and summary creation
+      Task queue via [RQ](https://python-rq.org/) and Redis for asynchronous news item processing
+  - title: NLP enrichment and story clustering
     icon: fas fa-brain
     description: >
-      Modern NLP features like entity recognition and summary creation
-  - title: Story clustering to reduce analyst workload
-    icon: fas fa-layer-group
-    description: >
-      Story clustering to reduce analyst workload
+      Entity recognition, summary creation, and story clustering reduce analyst workload.
   - title: Recognizes cybersecurity terms like APTs, CVEs, IoCs
     icon: fas fa-shield-alt
     description: >
