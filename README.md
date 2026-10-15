@@ -36,6 +36,10 @@ The [Chat guide](content/en/docs/chat/_index.md) is paired with
 Its screenshots in `static/docs/chat-*.png` show the local application's workspace,
 a live Story search, and configured provider settings.
 
+Conference talks and publications are listed in `content/en/media/index.html`.
+Store slide PDFs in `static/` and link them from the media page. Run
+`./htmltest.sh` after updating the page to check the site and its links.
+
 ## Deploy
 
 GitHub Actions publish master branch to GitHub Pages
