@@ -104,6 +104,8 @@ http://<url>:<TARANIS_PORT>/login
 
 ## Initial Setup
 
+Set up regular backups of the database, Core files, and deployment configuration. See [Backup / Restore](/docs/admin/backup-restore/#docker-compose) for the provided scripts and recovery procedure.
+
 **The default credentials are `user` / `user` and `admin` / `admin`. Change them before production use.**
 
 The passwords for these two default users can be overridden by setting the environment variables `PRE_SEED_PASSWORD_ADMIN` or `PRE_SEED_PASSWORD_USER` before first launch.

@@ -30,6 +30,11 @@ hugo server
 The documentation sidebar uses Docsy's compact, foldable navigation. Put child
 pages inside their parent section directory so they appear under that section.
 
+The [Backup / Restore guide](content/en/docs/admin/backup-restore.md) under
+Administration covers the application repository's Docker scripts and Kubernetes
+database and Core PVC recovery. Keep it aligned with `docker/database/` and
+`deploy/` in the application repository.
+
 The [Chat guide](content/en/docs/chat/_index.md) is paired with
 [provider settings](content/en/docs/admin/chat.md) and
 [deployment instructions](content/en/docs/getting-started/09_chat.md).
