@@ -27,19 +27,21 @@ Start the local server with
 hugo server
 ```
 
-The documentation sidebar uses Docsy's compact, foldable navigation. Put child
-pages inside their parent section directory so they appear under that section.
+### Documentation
 
-The [Backup / Restore guide](content/en/docs/admin/backup-restore.md) under
-Administration covers the application repository's Docker scripts and Kubernetes
-database and Core PVC recovery. Keep it aligned with `docker/database/` and
-`deploy/` in the application repository.
+The pages under `/docs/` are maintained in the application repository at
+[`taranis-ai/docs/user`](https://github.com/taranis-ai/taranis-ai/tree/master/docs/user).
+Hugo imports them as a module (see `[[module.imports]]` in `hugo.toml`), so every
+build fetches the latest docs from `master`. Edit them there, not here.
 
-The [Chat guide](content/en/docs/chat/_index.md) is paired with
-[provider settings](content/en/docs/admin/chat.md) and
-[deployment instructions](content/en/docs/getting-started/09_chat.md).
-Its screenshots in `static/docs/chat-*.png` show the local application's workspace,
-a live Story search, and configured provider settings.
+To preview your local application checkout instead:
+
+```bash
+HUGO_MODULE_REPLACEMENTS="github.com/taranis-ai/taranis-ai -> $(realpath ../taranis-ai)" hugo server
+```
+
+Docs changes merged to `master` in the application repository trigger the
+GitHub Pages deployment of this site.
 
 Conference talks and publications are listed in `content/en/media/index.html`.
 Store slide PDFs in `static/` and link them from the media page. Run

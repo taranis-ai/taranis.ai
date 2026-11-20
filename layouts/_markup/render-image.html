@@ -1,0 +1,11 @@
+{{- /* Resolve repo-relative image paths (e.g. ../images/x.png) against the
+       Markdown file's directory, so the same file renders on GitHub and here. */ -}}
+{{- $u := urls.Parse .Destination -}}
+{{- $src := .Destination -}}
+{{- if and (not $u.IsAbs) (not (hasPrefix $u.Path "/")) -}}
+  {{- with .Page.File -}}
+    {{- $src = path.Join .Dir $u.Path | relURL -}}
+  {{- end -}}
+{{- end -}}
+<img src="{{ $src }}" alt="{{ .PlainText }}" {{- with .Title }} title="{{ . }}"{{ end }}>
+{{- /**/ -}}

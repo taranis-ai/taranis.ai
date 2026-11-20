@@ -54,6 +54,12 @@ jobs:
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - name: Check that the docs from taranis-ai were imported
+        run: |
+          if [ ! -f public/docs/index.html ]; then
+            echo "::error::public/docs/ is missing. Was docs/user found in taranis-ai master?"
+            exit 1
+          fi
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
