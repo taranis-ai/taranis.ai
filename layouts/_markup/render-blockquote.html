@@ -1,0 +1,11 @@
+{{- /* GitHub alerts (> [!NOTE]) render as Docsy pageinfo/alert boxes. */ -}}
+{{- if eq .Type "alert" -}}
+  {{- if eq .AlertType "note" -}}
+<div class="pageinfo pageinfo-primary">{{ .Text }}</div>
+  {{- else -}}
+  {{- $color := index (dict "tip" "success" "important" "info" "warning" "warning" "caution" "danger") .AlertType | default "primary" -}}
+<div class="alert alert-{{ $color }}" role="alert">{{ .Text }}</div>
+  {{- end -}}
+{{- else -}}
+<blockquote>{{ .Text }}</blockquote>
+{{- end -}}
