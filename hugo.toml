@@ -98,3 +98,22 @@ enable = false
   [[module.imports]]
     path = "github.com/google/docsy"
     disable = false
+
+  # The docs live in the application repository under docs/user.
+  # `version` needs Hugo >= 0.150. "master" fetches the latest docs on every build.
+  # Preview a local checkout instead:
+  #   HUGO_MODULE_REPLACEMENTS="github.com/taranis-ai/taranis-ai -> /abs/path/to/taranis-ai" hugo server
+  [[module.imports]]
+    path = "github.com/taranis-ai/taranis-ai"
+    version = "master"
+    [[module.imports.mounts]]
+      source = "docs/user"
+      target = "content/docs"
+      excludeFiles = ["images/**", "README.md"]
+    [[module.imports.mounts]]
+      source = "docs/user/images"
+      target = "static/docs/images"
+
+# Resolve relative Markdown links (e.g. ../admin/bots.md) to page URLs.
+[markup.goldmark.renderHooks.link]
+  useEmbedded = "fallback"
